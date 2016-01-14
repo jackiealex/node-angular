@@ -1,0 +1,2085 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"show",
+				"showName"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"btn",
+				"btn-stop"
+			],
+			[
+				"set",
+				"setUrl"
+			],
+			[
+				"rewad",
+				"reward"
+			],
+			[
+				"rew",
+				"reward"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"user",
+				"userItem"
+			],
+			[
+				"atu",
+				"auto"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ph",
+				"phones"
+			],
+			[
+				"del",
+				"deltaTime"
+			],
+			[
+				"scro",
+				"scrollY"
+			],
+			[
+				"hid",
+				"hidden"
+			],
+			[
+				"roo",
+				"room"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"scrol",
+				"scrollHeight"
+			],
+			[
+				"sc",
+				"scrollElement"
+			],
+			[
+				"du",
+				"duration"
+			],
+			[
+				"deta",
+				"delta"
+			],
+			[
+				"star",
+				"startPos"
+			],
+			[
+				"cha",
+				"chat-records"
+			],
+			[
+				"tras",
+				"transiton"
+			],
+			[
+				"hide",
+				"hideKeyboard"
+			],
+			[
+				"sh",
+				"show"
+			],
+			[
+				"image",
+				"images"
+			],
+			[
+				"_",
+				"_animatedImageArray_"
+			],
+			[
+				"argu",
+				"arguments"
+			],
+			[
+				"pro",
+				"promise"
+			],
+			[
+				"sec",
+				"secs"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"ani",
+				"animated"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"msg",
+				"msgArray"
+			],
+			[
+				"fu",
+				"fun	Function"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"inde",
+				"msgIndex"
+			],
+			[
+				"tis",
+				"this"
+			],
+			[
+				"top",
+				"topPos"
+			],
+			[
+				"lef",
+				"leftPos"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"child",
+				"childPrototype"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"name",
+				"names"
+			],
+			[
+				"this",
+				"this"
+			],
+			[
+				"start",
+				"startCSS"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"curre",
+				"currentDeltaTime"
+			],
+			[
+				"e",
+				"el"
+			],
+			[
+				"pl",
+				"playing"
+			],
+			[
+				"crea",
+				"createParticle"
+			],
+			[
+				"ra",
+				"radius"
+			],
+			[
+				"vl",
+				"xVelocity"
+			],
+			[
+				"opts",
+				"options"
+			],
+			[
+				"ct",
+				"ctx"
+			],
+			[
+				"app",
+				"appCode"
+			],
+			[
+				"ap",
+				"appCode"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"use",
+				"userMethod"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"opt",
+				"options"
+			],
+			[
+				"rg",
+				"rgbaToString"
+			],
+			[
+				"iner",
+				"innerWidth"
+			],
+			[
+				"v",
+				"xVelocity"
+			],
+			[
+				"ac",
+				"accelorate"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"pr",
+				"proto	Prototype"
+			],
+			[
+				"gl",
+				"globalProgressEle"
+			],
+			[
+				"num",
+				"num2"
+			],
+			[
+				"get",
+				"getChangedCSS"
+			],
+			[
+				"run",
+				"runFrameAnimation"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"had",
+				"handler"
+			],
+			[
+				"mod",
+				"mods"
+			],
+			[
+				"da",
+				"datetimepicker"
+			],
+			[
+				"jqeu",
+				"jquery"
+			],
+			[
+				"if",
+				"ifr"
+			],
+			[
+				"getE",
+				"getSingleElement"
+			],
+			[
+				"remo",
+				"removeChild"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"load",
+				"loadCssAsync"
+			],
+			[
+				"sty",
+				"stylesheet"
+			],
+			[
+				"add",
+				"addPipeRoutes"
+			],
+			[
+				"htp",
+				"httpServer"
+			],
+			[
+				"rendr",
+				"renderFile"
+			],
+			[
+				"re",
+				"rewardOrders"
+			],
+			[
+				"head",
+				"headPortrait"
+			],
+			[
+				"borer",
+				"border-bottom"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"de",
+				"detect"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"pal",
+				"pagelet"
+			],
+			[
+				"page",
+				"pagelet"
+			],
+			[
+				"se",
+				"selector"
+			],
+			[
+				"def",
+				"defAll"
+			],
+			[
+				"gr",
+				"groupCount"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"file",
+				"files"
+			],
+			[
+				"post",
+				"postData"
+			],
+			[
+				"requ",
+				"request"
+			],
+			[
+				"getA",
+				"getAccessTokenByRefresh"
+			],
+			[
+				"_is",
+				"_isWeiXin_"
+			],
+			[
+				"append",
+				"appendTo"
+			],
+			[
+				"_top",
+				"_topic_list_"
+			],
+			[
+				"_s",
+				"_start_play_ticker_"
+			],
+			[
+				"_topic_l",
+				"_topic_list_map_"
+			],
+			[
+				"data",
+				"topicData"
+			],
+			[
+				"_lo",
+				"_loadedCount_"
+			],
+			[
+				"loaded",
+				"_loadedCount_"
+			],
+			[
+				"pgor",
+				"progressResource"
+			],
+			[
+				"loaed",
+				"_loadedImageCount_"
+			],
+			[
+				"make",
+				"makeAudioLoaded"
+			],
+			[
+				"obj",
+				"objId"
+			],
+			[
+				"debu",
+				"debugger"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/bills/finance_flow.php",
+			"settings":
+			{
+				"buffer_size": 26577,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/company/update.php",
+			"settings":
+			{
+				"buffer_size": 31494,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/user/profile.php",
+			"settings":
+			{
+				"buffer_size": 63334,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/jack/workspace/cloudbaoxiao.com/cloudbx-pc-web/index.html",
+			"settings":
+			{
+				"buffer_size": 459,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n	\"dependencies\": {\n		/* webkit moz o and modern broswer support */\n		\"jquery-modern\": \"2.0.0\",\n\n		/* IE 8 support */\n		\"jquery-legacy\": \"http://code.jquery.com/jquery-1.9.1.js\",\n\n		/* IE 6 support */\n		\"jquery-old\": \"http://code.jquery.com/jquery-1.12.js\"\n	}\n}",
+			"file": "/Users/jack/workspace/cloudbaoxiao.com/cloudbx-pc-web/static/js/bower.js",
+			"file_size": 262,
+			"file_write_time": 130971528040000000,
+			"settings":
+			{
+				"buffer_size": 262,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n    \"folders\": [],\n    \"settings\": {\n        \"tab_size\": 8\n    },\n    \"build_systems\": [{\n        \"name\": \"List\",\n        \"cmd\": [\"ls\"]\n    }]\n}",
+			"file": "config.sublime-project",
+			"file_size": 146,
+			"file_write_time": 130971529350000000,
+			"settings":
+			{
+				"buffer_size": 146,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "fo ja",
+		"selected_items":
+		[
+			[
+				"fo ja",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"fo",
+				"CodeFormatter: Format as CSS Syntax"
+			],
+			[
+				"fo js",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"for",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"ht",
+				"HTMLBeautify"
+			],
+			[
+				"syn h",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"sy h",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn te",
+				"Set Syntax: TeX"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"h",
+				"HTMLBeautify"
+			],
+			[
+				"sy ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"s y",
+				"Set Syntax: Stylus"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"syn",
+				"Set Syntax: JSON"
+			],
+			[
+				"syntax ht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"sy ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"f",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"syn ie",
+				"Set Syntax: IcedCoffeeScript"
+			],
+			[
+				"s j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"htm",
+				"HTMLBeautify"
+			],
+			[
+				"form",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"syn me",
+				"Set Syntax: Emmet"
+			],
+			[
+				"bea",
+				"HTMLBeautify"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"synt ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"syn co",
+				"Set Syntax: IcedCoffeeScript"
+			],
+			[
+				"sysn ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synj",
+				"Set Syntax: JSON"
+			],
+			[
+				"syntax ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"set ht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"ha",
+				"Set Syntax: HTML (ASP)"
+			],
+			[
+				"sns",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"j",
+				"Javascript Beautify"
+			],
+			[
+				"sy",
+				"Set Syntax: Stylus"
+			],
+			[
+				"syn st",
+				"Set Syntax: Stylus"
+			],
+			[
+				"syns j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"insl",
+				"Package Control: Install Package"
+			],
+			[
+				"pac r",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"syn ",
+				"Set Syntax: Stylus"
+			],
+			[
+				"sysn coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"syn c",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package ma",
+				"Package Control: Remove Package"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/static/css/widgets/loading-default.css",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/static/js/finance_flow.js",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/company/show.php",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/config/development/api.php",
+		"/Users/jack/workspace/gitwork.com/git_lab/hello/foo.txt",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/bills/finance_flow.php",
+		"/Users/jack/workspace/gitwork.com/php/learn/dog.class.php",
+		"/Users/jack/workspace/gitwork.com/php/learn/animal.class.php\nanimal.class.php",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/controllers/admin/comments.php",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/config/autoload.php",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/helpers/message_helper.php",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/models/Test_Model.php",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/models/module_group_model.php",
+		"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/items/edit.php",
+		"/Users/jack/workspace/gitwork/alex/bleach/bleach/src/main/java/com/i91ku/bleach/util/CryptoUtils.java",
+		"/Users/jack/workspace/gitwork/cloudbaoxiao/reimadmin/static/province.json",
+		"/Users/jack/workspace/gitwork/cloudbaoxiao/reimadmin/static/images/btn_audit_2.jpg",
+		"/Users/jack/workspace/gitwork/alex/<VirtualHost *:8880>",
+		"/Users/jack/workspace/gitwork/cloudbaoxiao/reimadmin/application/helpers/report_view_utils_helper.php",
+		"/Users/jack/workspace/php/test/index.php",
+		"/Users/jack/workspace/gitwork/cloudbaoxiao/reimadmin/static/default_32.png",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/css/ringapp.css",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/shichang/ringapp.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/shichang/ringapp.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/huodong/caige.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/publish.js",
+		"/Users/jack/workspace/gitwork/591ku/gittest/a.txt",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/carousel/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/horizontal/index.html",
+		"/Users/jack/workspace/gitwork/591ku/gittest/project1/a.txt",
+		"/Users/jack/workspace/gitwork/591ku/gittest/dong/a.txt",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/infinite/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/event-passthrough/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/simple/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/snap/index.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/css/reward.css",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/routes/shichang/ringapp.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/reward.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/app.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/css/huodong/hongbao/caige.css",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/css/publish.css",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/shichang/momo.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/huodong/caige/caige.html",
+		"/Users/jack/workspace/gitwork/591ku/C/main.cpp",
+		"/Users/jack/workspace/gitwork/591ku/es6/events.js",
+		"/Users/jack/workspace/gitwork/591ku/es6/deepClone.js",
+		"/Users/jack/workspace/gitwork/591ku/h5/event/index.html",
+		"/Users/jack/workspace/gitwork/591ku/es6/bind.js",
+		"/Users/jack/workspace/gitwork/591ku/h5/square.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/routes/huodong/christ2016.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/routes/Proxy.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/huodong/christ2016/particle.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/huodong/christ2016/index.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/huodong/christmas/santa-claus.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/css/huodong/hongbao/christ-2016.css",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/probe/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/scroll-to-element/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/parallax/index.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/libs/iscroll.js",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/no-transition/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/key-bindings/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/infinite/dataset.php",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/forms/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/barebone/index.html",
+		"/Users/jack/workspace/gitwork/591ku/lib-open/iscroll/demos/bounce-easing/index.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/huodong/hongbao/share.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/img/btn-stop.png",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/img/404.png",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/routes/huodong/hongbao.js",
+		"/Users/jack/workspace/gitwork/591ku/h5/rect.html",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/globalCompositeOperation.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/particle.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/build.coffee",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/rename.js",
+		"/Users/jack/workspace/gitwork/591ku/h5/scroll/a.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/huodong/exchange/index.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/huodong/christ2016.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/css/index.css",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/css/huodong/hongbao/exchange.css",
+		"/Users/jack/workspace/gitwork/591ku/wesing/master.coffee",
+		"/Users/jack/workspace/gitwork/591ku/wesing/config.coffee",
+		"/Users/jack/workspace/gitwork/591ku/wesing/views/master/base.html",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/boot/socket-client.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/__fis_work__/views/master/base.html",
+		"/Users/jack/workspace/gitwork/591ku/wesing/package.json",
+		"/Users/jack/workspace/gitwork/591ku/wesing/__fis_work__/1449814124590/views/master/base.html",
+		"/Users/jack/workspace/gitwork/591ku/wesing/app.coffee",
+		"/Users/jack/workspace/gitwork/591ku/wesing/libs/AppBaseController.coffee",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/huodong/exchange.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/topic/publish.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/views/test/index.html",
+		"/Users/jack/workspace/gitwork/ReactNativeHelloWorld/index.ios.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/mouse.js",
+		"/Users/jack/workspace/gitwork/591ku/h5/animate/animate.js",
+		"/Users/jack/workspace/gitwork/591ku/h5/animate/index.html",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/boot/bigpipe.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/animate.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/routes/huodong/caige.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/index.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/maichang.caller.sdk.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/reward.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/flames.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/huodong/reward.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/output/views/huodong/11/diange.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/huodong/hongbao/share.html",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/flame.me.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/basic/index.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/huodong/reward/index.html",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/huodong/11/diange.html",
+		"/Users/jack/workspace/gitwork/591ku/canvas/basic/getImageData.html",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/admin/add.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/poster/publish.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/basic/gradient.html",
+		"/Users/jack/workspace/gitwork/591ku/canvas/basic/drawImage.html",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/boot/entry.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/applaunch/publish.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/poster/modify.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/notification/publish.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/music/publish.js",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod/music/modify.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/tail.me.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/call.html",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/main.coffee",
+		"/Users/jack/workspace/gitwork/591ku/wesing/static/js/boot/config.js",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/tail.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/views/call.api.html",
+		"/Users/jack/workspace/gitwork/591ku/canvas/particle/static/js/index.js",
+		"/Users/jack/workspace/gitwork/591ku/share-webapp/static/js/libs/debug-console.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views",
+			"<project>",
+			"/Users/jack/workspace/gitwork/591ku/wesing/static/js/mod",
+			"/Users/jack/workspace/gitwork/591ku/lib/jquery/src",
+			"/Users/jack/workspace/gitwork/591ku/wesing/static/js",
+			"/Users/jack/workspace/gitwork/591ku/wesing",
+			"/Users/jack/workspace/gitwork/591ku/mousai",
+			"/Users/jack/workspace/gitwork/591ku/share-webapp/static",
+			"/Users/jack/workspace/gitwork/591ku",
+			"/Users/jack/workspace/gitwork/591ku/weixin",
+			"/Users/jack/workspace/gitwork/591ku",
+			"/Users/jack/workspace/gitwork/591ku/wesing/static",
+			"/Users/jack/workspace/gitwork/591ku/wesing/static/js",
+			"/Users/jack/workspace/gitwork/591ku/wesing/views",
+			"/Users/jack/workspace/gitwork/591ku/itplusapp/index.hyperesources",
+			"/Users/jack/workspace/gitwork/591ku/wesing/routes",
+			"/Users/jack/workspace/gitwork/591ku/wesing/static/js",
+			"/Users/jack/workspace/gitwork/591ku/wesing/static",
+			"/Users/jack/workspace/gitwork/591ku/wesing/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai",
+			"/Users/jack/workspace/gitwork/591ku/moirai/views",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static/js/mod",
+			"/Users/jack/workspace/gitwork/591ku/moirai",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static/js/mod",
+			"/Users/jack/workspace/gitwork/591ku/moirai/views",
+			"/Users/jack/workspace/gitwork/591ku/lib/jquery/src",
+			"/Users/jack/workspace/gitwork/591ku/moirai/libs",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static/js",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/libs",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/web-spider/pinsta",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static/js",
+			"/Users/jack/workspace/gitwork/591ku/moirai/extend/pinsta",
+			"/Users/jack/workspace/gitwork/591ku/moirai/__cache__",
+			"/Users/jack/workspace/gitwork/591ku/moirai/extend",
+			"/Users/jack/workspace/gitwork/591ku/moirai/extend/pinsta",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/routes",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/static/css",
+			"/Users/jack/workspace/gitwork/591ku/moirai/views/pagelet",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/static/js/mod",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/routes",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/views",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/static",
+			"/Users/jack/workspace/gitwork/591ku/mousai",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/views",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/libs",
+			"/Users/jack/workspace/gitwork/591ku/moirai",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/routes",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/libs",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/routes",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/libs",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/model",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/output",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/views",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/routes",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/model",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/libs",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/views",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/routes",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/static/js",
+			"/Users/jack/workspace/gitwork/591ku/fmsjs/routes",
+			"/Users/jack/workspace/gitwork/591ku/mousai/static/js",
+			"/Users/jack/workspace/gitwork/591ku/mousai/static",
+			"/Users/jack/workspace/gitwork/591ku/mousai/views",
+			"/Users/jack/workspace/gitwork/591ku/mousai/static/plugins/js-sdk",
+			"/Users/jack/workspace/gitwork/591ku/moirai/views",
+			"/Users/jack/workspace/gitwork/591ku/moirai/output",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/model",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/mumbaby/libs",
+			"/Users/jack/workspace/gitwork/591ku/mumbaby/model",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static",
+			"/Users/jack/workspace/gitwork/591ku/moirai/views",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static",
+			"/Users/jack/workspace/gitwork/591ku/moirai/model",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai/static/plugins/ueditor1_4_2",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/moirai",
+			"/Users/jack/workspace/gitwork/591ku/moirai/model",
+			"/Users/jack/workspace/gitwork/591ku/moirai/routes",
+			"/Users/jack/workspace/gitwork/591ku/mumbaby/model",
+			"/Users/jack/workspace/gitwork/591ku/mumbaby/static",
+			"/Users/jack/workspace/gitwork/591ku/moirai",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"宜宾市商业银行",
+			"中江市农村信用社",
+			"css",
+			"default",
+			"loadComplete",
+			"onCom",
+			"ajax",
+			"$grid",
+			"ajax",
+			"red",
+			"ajax",
+			"loading",
+			"__BASEURL",
+			"load",
+			"loading",
+			"bind_event",
+			"load",
+			"bills/listfinance",
+			"$grid",
+			"grid-table",
+			"table",
+			"ajax",
+			"loading",
+			"color",
+			"color_blue",
+			"测试",
+			"items/update",
+			"http://dadmin.cloudbaoxiao.com/items/update",
+			"col-sm-1 control-label no-padding-right",
+			"dfasdkj",
+			"ClassName",
+			"mysql",
+			"/Library/WebServer/Documents",
+			"player",
+			"play",
+			"_id",
+			"alert",
+			"parseJSON",
+			"{}",
+			".ban",
+			"button",
+			"class=\"btn-",
+			"con",
+			"parseJSON",
+			"wrapper",
+			"iscroll",
+			"btn-a",
+			"nickname",
+			".btn",
+			"img",
+			"rewardObj",
+			"index",
+			"rsAd",
+			"left",
+			"height",
+			"user",
+			"pack",
+			"webkit",
+			"ader",
+			"caige",
+			"platform",
+			"ringapp",
+			"index",
+			"liii",
+			"onclick",
+			"function_name",
+			"grand",
+			"class",
+			"father",
+			"100px",
+			"obj",
+			"Number",
+			"2E6014",
+			"click",
+			"down",
+			">=",
+			"1000",
+			"hidde",
+			"starfield1",
+			"_isWe",
+			"getAccessTokenByRefresh",
+			"location",
+			"afterGetBrowserType",
+			"_IsW",
+			"getWeiXinUserProfileByCode",
+			"ISc",
+			"IS",
+			"22",
+			"22px",
+			" 1s;",
+			"webkit",
+			"showKeyboard",
+			"'我想'",
+			"chat-",
+			"$('.chat-records')",
+			"libs",
+			"particle",
+			"getWeiXinUserProfileByCode",
+			"ApllyFastClick",
+			"fas",
+			"2000",
+			"_snsapi_userinfo_",
+			"getWeiXinUserProfileByCode",
+			"9696",
+			"getConfigSignature",
+			"getWeiXinUserProfileByCode",
+			"loadingGlobalResouce",
+			"_weixin_data_",
+			"getConfigSignature",
+			"readyWeiXin",
+			"getUserInfo",
+			"我要",
+			"我TMD居然听完了！",
+			"lightSpeedIn",
+			"downloadLink",
+			"flipXIn",
+			"zoomIn",
+			"guide",
+			"text",
+			"esle",
+			"showKeyboard",
+			"80px",
+			"getRandomWish",
+			"static/img/meinv",
+			"/static/img/meinv",
+			"christ2016",
+			"Christ2016",
+			"633"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/bills/finance_flow.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26577,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								510,
+								510
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/company/update.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21999,
+								21999
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5929.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/jack/workspace/cloudbaoxiao.com/reimadmin/application/views/user/profile.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 63334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28527,
+								28534
+							],
+							[
+								28536,
+								28543
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 20964.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/jack/workspace/cloudbaoxiao.com/cloudbx-pc-web/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								435,
+								435
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/jack/workspace/cloudbaoxiao.com/cloudbx-pc-web/static/js/bower.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "config.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"finance_flow",
+				"reimadmin/static/js/finance_flow.js"
+			],
+			[
+				"bills/fin",
+				"reimadmin/application/views/bills/finance_flow.php"
+			],
+			[
+				"company/u",
+				"reimadmin/application/views/company/update.php"
+			],
+			[
+				"company/sh",
+				"reimadmin/application/views/company/show.php"
+			],
+			[
+				"bills/fi",
+				"reimadmin/application/views/bills/finance_flow.php"
+			],
+			[
+				"views/members/in",
+				"cloudbaoxiao.com/reimadmin/application/views/members/index.php"
+			],
+			[
+				"exchange.cs",
+				"share-webapp/static/css/huodong/hongbao/exchange.css"
+			],
+			[
+				"static/css/huodong/hongbao/share.css",
+				"share-webapp/static/css/huodong/hongbao/share.css"
+			],
+			[
+				"static/css/page/user/message-",
+				"wesing/static/css/page/user/message-list.styl"
+			],
+			[
+				"static/css/page/common/widget/mini-player",
+				"wesing/static/css/page/common/widget/mini-player.styl"
+			],
+			[
+				"search",
+				"wesing/static/js/mod/user/search.js"
+			],
+			[
+				"bigp",
+				"wesing/static/js/boot/bigpipe.js"
+			],
+			[
+				"wesingbigpie",
+				"wesing/static/js/boot/bigpipe.js"
+			],
+			[
+				"bigpipe",
+				"wesing/static/js/boot/bigpipe.js"
+			],
+			[
+				"wesingbigpi",
+				"wesing/static/js/boot/bigpipe.js"
+			],
+			[
+				"wesing/static/js/mod/user/list",
+				"wesing/static/js/mod/user/list.js"
+			],
+			[
+				"static/js/mod/user/list",
+				"wesing/static/js/mod/user/list.js"
+			],
+			[
+				"message",
+				"wesing/routes/MessageByGroup.coffee"
+			],
+			[
+				"wesingstatic/css/page/label/list",
+				"wesing/static/css/page/label/list.styl"
+			],
+			[
+				"wesing/bigpipe",
+				"wesing/static/js/boot/bigpipe.js"
+			],
+			[
+				"pagelet/test/layout.html",
+				"wesing/views/pagelet/test/layout.html"
+			],
+			[
+				"static/plugins/datetime.picker/jquery.datetimepicker.js",
+				"fmsjs/static/plugins/datetime.picker/jquery.datetimepicker.js"
+			],
+			[
+				"static/plugins/datetime.picker/jquery.datetimepicker",
+				"fmsjs/static/plugins/datetime.picker/jquery.datetimepicker.css"
+			],
+			[
+				"static/css/page/order/visual",
+				"wesing/static/css/page/order/visual/by-status.styl"
+			],
+			[
+				"static/css/page/music/publish",
+				"wesing/static/css/page/music/publish.styl"
+			],
+			[
+				"static/js/mod/user/list.js",
+				"wesing/static/js/mod/user/list.js"
+			],
+			[
+				"wesingmusic/list",
+				"591ku/wesing/views/pagelet/music/list.html"
+			],
+			[
+				"/mod/order/visual/by-status",
+				"wesing/static/js/mod/order/visual/by-status.js"
+			],
+			[
+				"static/css/page/statistics/dnu",
+				"moirai/static/css/page/statistics/dnu.styl"
+			],
+			[
+				"wesingconfig",
+				"wesing/config.coffee"
+			],
+			[
+				"static/js/mod/statistics/dnu",
+				"moirai/static/js/mod/statistics/dnu.js"
+			],
+			[
+				"wesingroutesorder",
+				"wesing/routes/Order.coffee"
+			],
+			[
+				"static/css/page/user/list",
+				"wesing/static/css/page/user/list.styl"
+			],
+			[
+				"static/js/mod/order/list.",
+				"wesing/static/js/mod/order/list.js"
+			],
+			[
+				"static/js/mod/version/publish",
+				"wesing/static/js/mod/version/publish.js"
+			],
+			[
+				"static/css/page/music/list.",
+				"wesing/static/css/page/music/list.styl"
+			],
+			[
+				"static/js/mod/music/list",
+				"wesing/static/js/mod/music/list.js"
+			],
+			[
+				"wesstatic/css/page/login/index",
+				"wesing/static/css/page/login/index.styl"
+			],
+			[
+				"wesinguser",
+				"wesing/routes/User.coffee"
+			],
+			[
+				"wesingstaticapp",
+				"wesing/static/js/app.coffee"
+			],
+			[
+				"wesingacces",
+				"wesing/model/Access.coffee"
+			],
+			[
+				"wesingapp.c",
+				"wesing/app.coffee"
+			],
+			[
+				"version.sty",
+				"wesing/static/css/page/version/list.styl"
+			],
+			[
+				"static/css/page/label/l",
+				"moirai/static/css/page/label/list.styl"
+			],
+			[
+				"wesingaccess",
+				"wesing/model/Access.coffee"
+			],
+			[
+				"wesingsidebar",
+				"wesing/views/common/layout/sidebar.html"
+			],
+			[
+				"static/js/mod/music/list.",
+				"wesing/static/js/mod/music/list.js"
+			],
+			[
+				"static/css/page/music/list",
+				"wesing/static/css/page/music/list.styl"
+			],
+			[
+				"label/list.ht",
+				"wesing/views/pagelet/label/list.html"
+			],
+			[
+				"wesuser",
+				"wesing/routes/User.coffee"
+			],
+			[
+				"westatic/css/page/user/list",
+				"wesing/static/css/page/user/list.styl"
+			],
+			[
+				"wesingpermi",
+				"wesing/routes/Permission.coffee"
+			],
+			[
+				"wesingroutesu",
+				"wesing/routes/User.coffee"
+			],
+			[
+				"music",
+				"wesing/routes/Music.coffee"
+			],
+			[
+				"wesingstaticapp.c",
+				"wesing/static/js/app.coffee"
+			],
+			[
+				"wesingviews/common",
+				"wesing/views/common/layout/sidebar.html"
+			],
+			[
+				"wepagena",
+				"wesing/views/common/widgets/pagenavi.html"
+			],
+			[
+				"wesingorder/list.sty",
+				"wesing/static/css/page/order/list.styl"
+			],
+			[
+				"wewidget",
+				"wesing/static/css/liblus/widget.styl"
+			],
+			[
+				"wesingmusicp",
+				"wesing/views/pagelet/music/publish.html"
+			],
+			[
+				"musiclis",
+				"wesing/views/pagelet/music/list.html"
+			],
+			[
+				"wesingnavi.ht",
+				"wesing/views/common/widgets/pagenavi.html"
+			],
+			[
+				"welabel/list.ht",
+				"wesing/views/pagelet/label/list.html"
+			],
+			[
+				"per",
+				"wesing/routes/Permission.coffee"
+			],
+			[
+				"wepagelet/permission/role.html",
+				"wesing/views/pagelet/permission/role.html"
+			],
+			[
+				"pagelet/permission/role.html",
+				"fmsjs/views/pagelet/permission/role.html"
+			],
+			[
+				"westatic/css/page/order/lis",
+				"wesing/static/css/page/order/list.styl"
+			],
+			[
+				"animate",
+				"lib/animate.css"
+			],
+			[
+				"wesing/static/css/page/admin/list",
+				"wesing/static/css/page/admin/list.styl"
+			],
+			[
+				"wesing/static/css/page/label/list",
+				"wesing/static/css/page/label/list.styl"
+			],
+			[
+				"wespagelet/admin/preview-role.h",
+				"wesing/views/pagelet/admin/preview-role.html"
+			],
+			[
+				"pagelet/user/list.html",
+				"moirai/views/pagelet/user/list.html"
+			],
+			[
+				"mod/common/fn/user.recommend",
+				"moirai/static/js/mod/common/fn/user.recommend.js"
+			],
+			[
+				"static/css/page/category/rel",
+				"moirai/static/css/page/category/rel.styl"
+			],
+			[
+				"static/js/mod/applaunch/publish",
+				"moirai/static/js/mod/applaunch/publish.js"
+			],
+			[
+				"water",
+				"moirai/static/js/mod/common/widget/waterflow.js"
+			],
+			[
+				"mod/applaunch/initdatetimepicker",
+				"moirai/static/js/mod/applaunch/initDateTimePicker.js"
+			],
+			[
+				"mod/common/widget/suggestion",
+				"moirai/static/js/mod/common/widget/suggestion.js"
+			],
+			[
+				"static/css/page/applaunch/publish",
+				"moirai/static/css/page/applaunch/publish.styl"
+			],
+			[
+				"static/js/mod/admin/publish.js",
+				"moirai/static/js/mod/admin/publish.js"
+			],
+			[
+				"tatic/js/mod/category/publish",
+				"moirai/static/js/mod/category/publish.js"
+			],
+			[
+				"common/widgets/input-image-preview",
+				"moirai/views/common/widgets/input-image-preview.html"
+			],
+			[
+				"static/css/page/applaunch/publis",
+				"moirai/static/css/page/applaunch/publish.styl"
+			],
+			[
+				"static/css/page/applaunch/publi",
+				"moirai/static/css/page/applaunch/publish.styl"
+			],
+			[
+				"static/css/page/notification/publish",
+				"moirai/static/css/page/notification/publish.styl"
+			],
+			[
+				"/static/js/mod/applunch/publish",
+				"moirai/static/js/mod/applunch/publish.js"
+			],
+			[
+				"static/js/mod/notification/publish.js",
+				"moirai/static/js/mod/notification/publish.js"
+			],
+			[
+				"/static/css/page/ad/list",
+				"moirai/static/css/page/ad/list.styl"
+			],
+			[
+				"moiraire.l",
+				"moirai/static/js/mod/category/rel.js"
+			],
+			[
+				"rel.",
+				"doc/node_modules/mkdirp/test/rel.js"
+			],
+			[
+				"moirai/static/css/page/label/list",
+				"moirai/static/css/page/label/list.styl"
+			],
+			[
+				"static/css/page/stickers/list",
+				"moirai/static/css/page/stickers/list.styl"
+			],
+			[
+				"static/js/mod/category/rel",
+				"moirai/static/js/mod/category/rel.js"
+			],
+			[
+				"static/css/page/category/list",
+				"moirai/static/css/page/category/list.styl"
+			],
+			[
+				"static/css/page/atlas/list",
+				"moirai/static/css/page/atlas/list.styl"
+			],
+			[
+				"static/css/page/atlas/publish",
+				"moirai/static/css/page/atlas/publish.styl"
+			],
+			[
+				"mod/common/widget/waterflow",
+				"moirai/static/js/mod/common/widget/waterflow.js"
+			],
+			[
+				"static/js/mod/atlas/list",
+				"moirai/static/js/mod/atlas/list.js"
+			],
+			[
+				"static/js/mod/order/list",
+				"fmsjs/static/js/mod/order/list.js"
+			],
+			[
+				"static/js/mod/atlas/list.js",
+				"fmsjs/static/js/mod/atlas/list.js"
+			],
+			[
+				"pagelet/order/list.html",
+				"fmsjs/views/pagelet/order/list.html"
+			],
+			[
+				"static/js/mod/label/list",
+				"moirai/static/js/mod/label/list.js"
+			],
+			[
+				"static/css/page/label/list",
+				"moirai/static/css/page/label/list.styl"
+			],
+			[
+				"mod/user/user-atlas",
+				"moirai/static/js/mod/user/user-atlas.js"
+			],
+			[
+				"static/css/page/user/atlas-list",
+				"moirai/static/css/page/user/atlas-list.styl"
+			],
+			[
+				"static/css/page/atlas/list.",
+				"moirai/static/css/page/atlas/list.styl"
+			],
+			[
+				"pagelet/atlas/list.html",
+				"moirai/views/pagelet/atlas/list.html"
+			],
+			[
+				"moiraistatic/js/mod/atlas/list.js",
+				"moirai/static/js/mod/atlas/list.js"
+			],
+			[
+				"moraistatic/css/page/atlas/list.",
+				"moirai/static/css/page/atlas/list.styl"
+			],
+			[
+				"/static/css/page/atlas/list",
+				"moirai/static/css/page/atlas/list.styl"
+			],
+			[
+				"static/css/page/login/index",
+				"moirai/static/css/page/login/index.styl"
+			],
+			[
+				"xx.",
+				"moirai/views/page/preview/xx.html"
+			],
+			[
+				"/static/css/page/login/in",
+				"moirai/static/css/page/login/index.styl"
+			],
+			[
+				"moiraistatic/js/mod/admin/list.js",
+				"moirai/static/js/mod/admin/list.js"
+			],
+			[
+				"moiraimodrel.js",
+				"moirai/static/js/mod/category/rel.js"
+			],
+			[
+				"category.rel.h",
+				"moirai/views/page/category/category.rel.html"
+			],
+			[
+				"category.rel.",
+				"moirai/views/page/category/category.rel.html"
+			],
+			[
+				"static/css/page/atlas/preview",
+				"moirai/static/css/page/atlas/preview.styl"
+			],
+			[
+				"static/js/mod/atlas/preview.js",
+				"moirai/static/js/mod/atlas/preview.js"
+			],
+			[
+				"static/js/mod/atlas/preview.",
+				"moirai/static/js/mod/atlas/preview.js"
+			],
+			[
+				"/static/css/page/category/rel",
+				"moirai/static/css/page/category/rel.styl"
+			],
+			[
+				"page/category/category.rel.html",
+				"moirai/views/page/category/category.rel.html"
+			],
+			[
+				"static/js/mod/atlas/publish",
+				"moirai/static/js/mod/atlas/publish.js"
+			],
+			[
+				"od/atlas/publish",
+				"moirai/static/js/mod/atlas/publish.js"
+			],
+			[
+				"atic/css/page/atlas/publish",
+				"moirai/static/css/page/atlas/publish.styl"
+			],
+			[
+				"css/page/category/publish",
+				"moirai/static/css/page/category/publish.styl"
+			],
+			[
+				"static/css/page/category/publish.st",
+				"moirai/static/css/page/category/publish.styl"
+			],
+			[
+				"fmsjspageletind",
+				"fmsjs/libs/pagelet/index.coffee"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 354.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
