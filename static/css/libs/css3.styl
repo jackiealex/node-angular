@@ -1,0 +1,82 @@
+// 自定义css3 
+
+@import "setting"
+@import "global"
+
+prefix($property, $value, vendors = $vendors)
+	for $v, $index in vendors
+		-{$v}-{$property}: $value
+	{$property}: $value
+
+box()
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: flex;   
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-box;     /* NEW - Chrome */
+	// for $v in $vendors
+	// 	display unquote('-' + $v + '-box')
+	// display: flex
+
+flex(value=1)
+	prefix(box-flex, value)
+	flex: 1
+
+pack(value=center)
+	prefix(box-pack, value)
+
+align(value=center)
+	prefix(box-align, value)
+
+orient(value=vertical)
+	prefix(box-orient, value)	
+	
+fontheight(value)
+	height: value;
+	line-height: value;
+
+size(value)
+	if length(arguments) > 1
+		width value[0];
+		height value[1];
+	else
+		width value
+		height value
+
+transform(value)
+	prefix(transform, value)
+
+transition(value)
+	prefix(transition, value)
+
+animation(value)
+	prefix(animation, value)
+shadow(value)
+	prefix(box-shadow, value)
+	
+clear()
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+column(value)
+	prefix(column-count, value)
+
+column-gap(value)
+	prefix(column-gap, value)
+
+// grandient
+gradient()
+	for $v in $vendors
+		background: s('-%s-gradient(%s)', $v, unquote(join(',', arguments)))
+
+no-select() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+		
