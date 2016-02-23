@@ -35,20 +35,19 @@ function compile_stylus(file_path, done, option) {
 	.then((rs)=>{
 		var errCSS = `
 			body{position: relative;}
-			body::after{content: '{warn>> stylus err, see your NODE CONSOLE}'; z-index: 99999; position:absolute; left: 0; top: 0; right: 0; padding: 8px;background: red; color: #fff}
+			body::before{content: "{{content}}"; z-index: 99999; position:absolute; left: 0; top: 0; right: 0; padding: 8px;background: red; color: #fff}
 		`;
 		var code = rs['data']
 		if(!rs['status']) {
-			console.log(rs['err'])
-			return done(errCSS)
+			console.log(rs);
+			return done(errCSS.replace('{{content}}', rs.err));
 		}
 		stylus(code)
 		.set('filename', file_path) //enable finder by relative urls
 		.render((err, str)=> {
 			if(err) {
 				console.log(err);
-				done(errCSS);
-				return;
+				return done(errCSS.replace('{{content}}', err['name'] + ': ' + err['message'].split(/\s+/)[0]));
 			}
 			return done(str);
 		}); 
