@@ -1,1 +1,3 @@
-console.log(11222);
+(function () {
+	$("#sideBar").niceScroll();
+})();

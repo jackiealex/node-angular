@@ -1,19 +1,123 @@
 @import "./libs/css3";
 @import "./reset";
+@import "./global";
 
 html, body {
 	height: 100%;
-	overflow: hidden;
 	font: 12px/1.5 tahoma,arial,'Hiragino Sans GB';
-	background: red;
-	font-size: 31px;
+	font-size: 14px;
 	color: #fff;
+	background: #fff;
 }
 
-h2 {
-	color: #fff;
+#header {
+	min-height: $headerHeight;
+	height: $headerHeight;
+	background: #fff;
+	width: 100%;
+	color: $themeColor;
+	z-index: 100;
+	position: fixed;
+	background: #fff;
+	vertical-align: bottom;
+	.inner-wrap {
+		float: left;
+		width: 100%;
+		position: relative;
+		left: $sidebarWidth;
+	}
+	.header-logo {
+        color: #fff;
+        background: $themeColor;
+        float: left;
+        width: $sidebarWidth;
+        position: relative;
+        margin-left: -($sidebarWidth);
+        
+		.logo {
+			width: 48px;
+			margin: 6px 12px;
+			float: left;
+		}
+		h2 {
+			font-size: 16px;
+			float: left;
+			height: 60px;
+			line-height: 60px;
+			margin-left: 12px;
+			color: #fff;
+		}
+	}
+	.header-content {
+		margin-right: $sidebarWidth;
+		position: relative;
+		border-bottom: 1px solid #eee;
+		height: $headerHeight;
+		ul {
+			position: absolute;
+			right: 0;
+			top: 0;
+			white-space: nowrap;
+			line-height: 60px;
+			li {
+				display: inline-block;
+				padding-right: 12px;
+				a {
+					color: #404040;
+				}
+			}
+		}
+	}
+	.header-route {
+		float: left;
+		line-height: 60px;
+		padding: 0 12px;
+	}
+	.input input {
+		height: 22px;
+		line-height: 22px;
+		border: 1px solid #eee;
+		padding: 0 4px;
+	}
+}
+ 
+#main {
+	padding-left: $sidebarWidth;
+	padding-top: $headerHeight;
 }
 
-img {
-	width: 65px;
+#sideBar {
+	background: #373d47;
+	width: $sidebarWidth;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+	transition-duration: .3s;
+	text-align: left;
+	.inner-wrap {
+		padding: 20px;
+		margin-top: $headerHeight;
+	}
+	ul li {
+		padding: 4px;
+	}
+	
+	
+	
 }
+
+#content {
+	display: block;
+	padding: 20px;
+	background: #fff;
+}
+
+.nicescroll-cursors {
+	background: #B4B4B4 !important;
+	border: none !important;
+}
+
