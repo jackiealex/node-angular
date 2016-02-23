@@ -11,12 +11,13 @@ import renderer from './libs/renderer'
 // config
 const CONFIG = (() => {
 	let config = null;
-	if(process.env['NODE_ENV'] === 'devlopment') {
+
+	if(process.env['NODE_ENV'] === 'development') {
 		config = require('../config/dev');
 	} else {
 		config = require('../config');
 	}
-	// console.log(CONFIG);
+	// console.log(process.env['NODE_ENV'], CONFIG);
 	return config
 })();
 
@@ -35,8 +36,29 @@ class Application {
 		this.port = CONFIG['http_port'];
 
 		this.initialize();
+		this.watch();
 
 		this.start();
+	}
+	watch() {
+		if(process.env['NODE_ENV']  !== 'development') {
+			return
+		}
+
+		var Gaze = require('gaze');
+		var target_files = CONFIG['watcher']['static'] || [];
+		var gaze = new Gaze(target_files, {
+			mode: 'poll',
+			debounceDelay: 1000
+		});
+
+		console.log(target_files)
+
+		gaze.on('all', (action, file_name)=>{
+			console.log(file_name, ' changed');
+			var root = path.resolve(__dirname, '../', '');
+			this.io.emit('reload', file_name.replace(root, ''), action);
+		});
 	}
 	initialize() {
 		// init server
@@ -94,7 +116,7 @@ class Application {
 						res.send(str)
 					})
 					break;
-					
+
 				default:
 					next('Error file ' + file_path_name + ' not found')
 					break;
@@ -103,7 +125,17 @@ class Application {
 		})
 	}
 	start() {
-		this.server.listen(this.port, ()=>{
+		var server = require('http').Server(this.server);
+
+		var io = this.io = require('socket.io')(server)
+
+		io.on('connection', (socket)=>{
+
+			console.log('connected')
+
+		});
+
+		server.listen(this.port, ()=>{
 			console.log('app started on port', this.port)
 		});
 	}

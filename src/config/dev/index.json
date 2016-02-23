@@ -1,12 +1,8 @@
 {
     "watcher": {
-        "browser": {
-            "target": ["static/**/*.*"]
-        },
-        "boot": {
-            "target": ["libs/**/*", "model/**/*", "routes/**/*", "extend/**/*.js", "handler/**/*", "*.coffee", "config.json"]
-        }
+        "static": ["static/**/*.*"],
+        "ui": ["libs/**/*", "model/**/*", "routes/**/*", "extend/**/*.js", "handler/**/*", "*.coffee", "config.json"]
     },
-    "http_port": 8787,
-    "static_CDN": "http://nuoyatest.qiniudn.com"
+    "http_port": 8889,
+    "static_CDN": ""
 }
