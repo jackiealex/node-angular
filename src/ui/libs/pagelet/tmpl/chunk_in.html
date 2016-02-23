@@ -1,0 +1,13 @@
+<script type="text/javascript" data-origin="pipe-in" async="async">
+	top['_SmartPipe_'].whenPageletArrive({
+		cfID: '<%= __cfID__ %>',
+		pipeID: '<%= __pipeID__ %>',
+		parentID: '<%= __parentID__ %>',
+		subViewIDs: '<%= children %>',
+		sel: '<%- selector %>',
+		op: '<%- op %>',
+		css: <%- css %>,
+		js: <%- js %>,
+		html: '<%- html %>'
+	});
+</script>

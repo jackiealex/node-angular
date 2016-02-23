@@ -1,0 +1,53 @@
+<style>
+	.mod-error {
+		margin: 12px;
+		text-align: center;
+		padding: 12px;
+		border-bottom: 1px solid rgb(218, 218, 218);
+	}
+	.help {
+		padding: 100px;
+	}
+	.code_list {
+		text-align: left;
+	}
+	.link-more {
+		margin: 12px;
+		font-size: 16px;
+	}
+	.link-more span {
+		display: inline-block;
+		height: 28px;
+		width: 28px;
+		border-radius: 20px;
+		background: green;
+		color: #fff;
+		font: 20px/28px bold;
+		text-align: center;
+		margin-right: 6px;
+	}
+</style>
+<div class="mod-error">
+	<h2>提示：<%= msg || '～' %> </h2>
+	<p>异常代码：<%= node_code %></p>
+	<p>请求路径：<%= __api_name__ %></p>
+	<p>请求参数：<%= __query_string__ %></p>
+	<%if (node_code == 20004) { %>
+		<p>您的会话已失效，<a href="/login" style="color: blue; display: inline">请点击我重新登录</a></p>
+	<% } else if(node_code == 30001) { %>
+		<a href="/login">参数错误</a>
+	<% } else if(node_code == 50001) { %>
+		<p>请联系服务端的同学</p>
+	<% } else if(node_code == 55) { %>
+		<p>您可能需要请检查你的网络情况</p>
+	<% } %>
+	<%if (data) { %>
+	<pre>
+		<h2>服务端返回内容如下</h2>
+		<%= JSON.stringify(data)%>
+	</pre>
+	<% } %>
+	<div  class="link-more">
+		<a href="/status/code" target="_blank"><span >?</span>错误代码</a>
+	</div>
+</div>
