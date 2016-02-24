@@ -18,3 +18,7 @@ node index.es
 	+ build system es6 and open source npm
 
 
++ 路由支持
++ angular模版引擎
++ js hot load
+

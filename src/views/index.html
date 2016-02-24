@@ -16,7 +16,7 @@
 	<script src="/static/js/libs/socket.io-1.4.5.js"></script>
 	<script src="/static/js/boost/socket-client.js"></script>
 </head>
-<body>
+<body ng-controller="MainController">
 	<header id="header">
 		<div class="inner-wrap">
 			<div class="header-logo">
@@ -41,15 +41,23 @@
 	<div id="sideBar">
 		<div class="inner-wrap scroller">
 			<ul>
-			<%for(var i =0 ;i<20;i++) { %>
-				<li>菜单项目<%= i %></li>
+				<li>
+					<a href="/#/test/12">test/12</a>
+				</li>
+				<li>
+					<a href="/#/test2/12">test/12</a>
+				</li>
+			<% for(var i =0 ;i<30; i++) { %>
+				<li>
+					<a href="/#/test/<%=i %>">菜单项目<%= i %></a>
+				</li>
 			<% } %>
 			</ul>
 		</div>
 	</div>
 	<div id="main">
 		<div id="content">
-			dsad
+			<div ng-view></div>	
 		</div>
 	</div>
 	<script src="/static/js/libs/requirejs/require.js" data-main="/static/js/main.js"></script>

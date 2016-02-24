@@ -2,16 +2,16 @@
 require.config({
   	baseUrl: '/static/js',
   	waitSeconds: 20,
+    urlArgs: "_s=" +  (new Date()).getTime(),
     paths: {
-        'domReady': 'libs/requirejs-domready/domReady',
+        'domReady': 'libs/domReady/domReady',
         'angular': 'libs/angular/angular',
+        'angular-route': 'libs/angular-route/angular-route',
         'jquery': 'libs/jquery/jquery',
         'nicescroll': 'libs/jquery.nicescroll/jquery.nicescroll.min'
     },
     shim: {
-        'angular': {
-            exports: 'ng'
-        }
+        'angular-route': ['angular']
     },
     // deps: [
     //     '/static/js/mod/test/b.js?delay=3&_r=12312',
@@ -23,6 +23,6 @@ require.config({
     //     '/static/js/mod/test/b.js?delay=1',
     //     '/static/js/mod/test/a.js?delay=3',
     // ]
-    deps: ['angular', 'index']
+    deps: ['jquery', 'angular', '../app/index']
 });
 

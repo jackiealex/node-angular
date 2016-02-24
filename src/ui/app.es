@@ -190,6 +190,6 @@ var app = new Application({
 	]
 });
 
-app.server.get('/', (req, res)=>{
+app.server.get('*', (req, res)=>{
 	res.render('index.html');
 })
