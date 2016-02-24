@@ -1,17 +1,17 @@
-###first, npm install
+### first, npm install
 
 make sure all npm installed
 
-###then, run and executed
+### then, run and executed
 
 ```shell
 node index.es
 ```
 
-##support
+## support
 ### with js css image and all static file hot load the they are changed, config in config/index.json 
 
-##code organization
+## code organization
 
 	+ static stylus for css, coffee-script or pure javascript for js, angular for template, use requirejs to load js modules
 	+ ui layer, nodejs
