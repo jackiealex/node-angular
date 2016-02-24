@@ -4,6 +4,7 @@ import path from 'path';
 // import 3rd part module
 import express from 'express';
 import _ from 'lodash';
+import colors from 'colors';
 
 // import self-defined module
 import renderer from './libs/renderer'
@@ -20,6 +21,14 @@ const CONFIG = (() => {
 	// console.log(process.env['NODE_ENV'], CONFIG);
 	return config
 })();
+
+// conditionally import for the developer
+(function (NODE_ENV) {
+	if(NODE_ENV === 'development') {
+		require('colors');
+	}
+})(process.env['NODE_ENV'])
+
 
 /**
  * define class Application
@@ -64,6 +73,10 @@ class Application {
 		// init server
 		this.server = express();
 
+		//init delay lab
+		const delayLab = this.options.delayLab
+		this.addDelayLab(delayLab['pattern'], delayLab['dir']);
+
 		// init static from assets
 		const assets = this.options['assets'];
 		for(let item of assets) {
@@ -80,6 +93,28 @@ class Application {
 				this.server.engine('html', this.options['engine']);
 				break
 		}
+	}
+	addDelayLab(pattern, dir) {
+		this.server.use(pattern, (req, res, next)=> {
+			let delay = req.query.delay || 0
+
+			if(!delay) {
+				return next();
+			}
+
+			let file_path_name = path.join(dir, req.path);
+			
+			var fs = require('fs');
+
+			delay = delay * 1000;
+			console.log(`${file_path_name} is delay-test: delay ms`.green);
+
+			fs.readFile(file_path_name, 'utf8', (err, str)=>{
+				setTimeout(()=>{
+					res.send(str);	
+				}, delay);
+			})
+		})
 	}
 	addStaticRoute (pattern, dir) {
 		this.server.use(pattern, express.static(dir));
@@ -145,6 +180,10 @@ var app = new Application({
 	http_port: CONFIG['http_port'],
 	views: './views',
 	engine: 'ejs',
+	delayLab: {
+		pattern: '/static',
+		dir: './static'
+	},
 	assets: [
 		{pattern: '/static', dir: './static'},
 		{pattern: '/favicon.ico', dir: './static/favicon.ico'}

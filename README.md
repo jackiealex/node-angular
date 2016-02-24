@@ -8,7 +8,13 @@ make sure all npm installed
 node index.es
 ```
 
-
 ##support
 ### with js css image and all static file hot load the they are changed, config in config/index.json 
+
+##code organization
+
+	+ static stylus for css, coffee-script or pure javascript for js, angular for template, use requirejs to load js modules
+	+ ui layer, nodejs
+	+ build system es6 and open source npm
+
 

@@ -12,9 +12,6 @@
 	<!-- base css -->
 	<link rel="stylesheet" href="/static/css/main.css">
 	
-	<script src="/static/js/libs/jquery/jquery.min.js"></script>
-	<script src="/static/js/libs/jquery.nicescroll/jquery.nicescroll.min.js"></script>
-	
 	<!-- add socket mechanism -->
 	<script src="/static/js/libs/socket.io-1.4.5.js"></script>
 	<script src="/static/js/boost/socket-client.js"></script>
@@ -42,7 +39,7 @@
 	 	</div>
 	</header>
 	<div id="sideBar">
-		<div class="inner-wrap">
+		<div class="inner-wrap scroller">
 			<ul>
 			<%for(var i =0 ;i<20;i++) { %>
 				<li>菜单项目<%= i %></li>
@@ -55,6 +52,6 @@
 			dsad
 		</div>
 	</div>
-	<script src="/static/js/main.js"></script>
+	<script src="/static/js/libs/requirejs/require.js" data-main="/static/js/main.js"></script>
 </body>
 </html>

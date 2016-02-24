@@ -1,3 +1,4 @@
-class a
-	constructor: () ->
-		console.log(123)
+define(['nicescroll'], (args) ->
+	angular.copy({})
+	# $("#sideBar .scroller").niceScroll();
+)
