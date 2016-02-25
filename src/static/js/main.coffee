@@ -16,21 +16,8 @@ require.config({
         }
         'angular-route': {
             deps: ['angular']
-            exports: 'ngRouteModule'
         }
+        'app/index': ['jquery', 'angular', 'angular-route']
     }
-    # deps: [
-    #     '/static/js/mod/test/b.js?delay=3&_r=12312',
-    #     '/static/js/mod/test/a.js?delay=3&_r=12',
-    #     '/static/js/mod/test/a.js?delay=3&_r=12312333d',
-    #     '/static/js/mod/test/a.js?delay=3',
-    #     '/static/js/mod/test/c.js?delay=3',
-    #     '/static/js/mod/test/a.js?delay=2',
-    #     '/static/js/mod/test/b.js?delay=1',
-    #     '/static/js/mod/test/a.js?delay=3',
-    # ]
-    deps: [
-        'jquery'
-        'app/index'
-    ]
+    deps: ['app/index']
 });
