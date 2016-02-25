@@ -4,7 +4,7 @@ require.config({
     waitSeconds: 20
     urlArgs: "_s=" + (+new Date)
     paths: {
-        'domReady': 'libs/domReady/domReady'
+        # 'domReady': 'libs/domReady/domReady'
         'angular': 'libs/angular/angular'
         'angular-route': 'libs/angular-route/angular-route'
         'jquery': 'libs/jquery/jquery'
