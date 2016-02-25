@@ -45,22 +45,26 @@
         return socket;
     };
     
-    var socket = __getSocketSingleton__();
+    function init() {
+        // for not send socket reqeust when loading the page
+        setTimeout(function () {
+            var socket = __getSocketSingleton__();
 
-    socket.on('connect', function() {
-        console.log('connected');
-    });
-    socket.on('disconnect', function() {
-        console.log('disconnect');
-    });
-    
-    socket.on('reload', function(file, action) {
-        doHotLoad(file)
-        // window.location.reload();
-    });
+            socket.on('connect', function() {
+                console.log('connected');
+            });
+            socket.on('disconnect', function() {
+                console.log('disconnect');
+            });
+            
+            socket.on('reload', function(file, action) {
+                doHotLoad(file)
+                // window.location.reload();
+            });
 
-    socket.on('push', function(data) {
-    });
+            socket.on('push', function(data) {
+            });
+        }, 0)
+    }
 
-    return __getSocketSingleton__();
 }());
