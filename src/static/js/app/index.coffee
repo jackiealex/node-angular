@@ -28,10 +28,8 @@ define ['app/services/routeResolver'], () ->
                     delay.promise
                 resolver: ()->
                     return;
-                    require(['app/controllers/TestController'], (Controller) ->
-                        debugger
+                    require ['app/controllers/TestController'], (Controller) ->
                     
-                    )
         )
         .when('/test2/:id',
             templateUrl: '/static/views/test2.html'
@@ -67,10 +65,16 @@ define ['app/services/routeResolver'], () ->
         $(window).on 'resize', ()=>
             sideBarHeight = $(window).height() - $('#header').height();
             $('#sideBar').height(sideBarHeight);
+            $('#main').css({'min-height': sideBarHeight});
         $(window).trigger('resize');
+
+        $('.header-logo').on 'click', (e)->
+            if $('#header').hasClass('collapse')
+                return $('#header, #main').removeClass('collapse')
+            $('#header, #main').addClass('collapse');
+
     require ['nicescroll'], ()->
         _bindEvents_()
-
         $("#sideBar").niceScroll();
 
     return app

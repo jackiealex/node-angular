@@ -9,6 +9,7 @@ html, body {
 	color: #393939;
 	background: #fff;
 	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
 }
 
 #header {
@@ -21,6 +22,20 @@ html, body {
 	position: fixed;
 	background: #fff;
 	vertical-align: bottom;
+	&.collapse {
+		.inner-wrap {
+			left: $sidebarWidthWhenCollapse;
+		}
+		.header-content {
+			margin-right: $sidebarWidthWhenCollapse;
+		}
+		.header-logo {
+
+			width: $sidebarWidthWhenCollapse;
+			margin-left: -($sidebarWidthWhenCollapse);
+		}
+		
+	}
 	.inner-wrap {
 		float: left;
 		width: 100%;
@@ -30,11 +45,13 @@ html, body {
 	.header-logo {
         color: #fff;
         background: $themeColor;
+        white-space: nowrap;
+        height: $headerHeight;
+        overflow: hidden;
         float: left;
         width: $sidebarWidth;
         position: relative;
         margin-left: -($sidebarWidth);
-        
 		.logo {
 			width: 48px;
 			margin: 6px 12px;
@@ -50,6 +67,7 @@ html, body {
 		}
 	}
 	.header-content {
+		
 		margin-right: $sidebarWidth;
 		position: relative;
 		border-bottom: 1px solid #eee;
@@ -83,8 +101,22 @@ html, body {
 }
  
 #main {
-	padding-left: $sidebarWidth;
+	margin-left: $sidebarWidth;
 	padding-top: $headerHeight;
+	z-index: 1;
+	position: relative;
+
+	transition(0.3s all linear);
+	&.collapse {
+		margin-left: $sidebarWidthWhenCollapse;
+	}
+}
+
+#content {
+	display: block;
+	padding: 20px;
+	background: #fff;
+	height: 2000px;
 }
 
 #sideBar {
@@ -99,21 +131,21 @@ html, body {
 	overflow-x: hidden;
 	transition-duration: .3s;
 	text-align: left;
+	z-index: 0;
 	.inner-wrap {
 		padding: 12px;
+		padding-left: 20px;
 	}
 	ul li {
-		padding: 4px;
+		padding: 8px;
 		a {
+			padding-left: 42px;
+			background: url('/static/img/circle.png') no-repeat;
+			line-height: 20px;
 			color: #fff;
+			display: block;
 		}
 	}
-}
-
-#content {
-	display: block;
-	padding: 20px;
-	background: #fff;
 }
 
 .nicescroll-cursors {
@@ -121,5 +153,28 @@ html, body {
 	border: none !important;
 	transform(translate3d(0,0,0));
 	// border-radius: 0 !important;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 3px;
+    width: 6px;
+    border-radius: 3px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #eaeaea; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
 }
 
