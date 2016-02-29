@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <head>
 	<title>云报销</title>
@@ -21,7 +21,7 @@
 	
 </head>
 <body ng-controller="MainController">
-	<header id="header">
+	<header id="header" ng-click="alert(1);">
 		<div class="inner-wrap">
 			<div class="header-logo">
 				<img class="logo" src="/static/img/logo.png" alt="">
@@ -64,7 +64,7 @@
 	</div>
 	<div id="main">
 		<div id="content">
-			<div ng-view></div>	
+			<div ng-view ng-animate="'scale'"></div>	
 		</div>
 	</div>
 	<script src="/static/js/libs/requirejs/require.js" data-main="/static/js/main.js"></script>

@@ -63,7 +63,14 @@ define ['app/services/routeResolver'], () ->
 
     angular.bootstrap(document, ['reimApp']);
 
+    _bindEvents_ = ()=>
+        $(window).on 'resize', ()=>
+            sideBarHeight = $(window).height() - $('#header').height();
+            $('#sideBar').height(sideBarHeight);
+        $(window).trigger('resize');
     require ['nicescroll'], ()->
-        $("#sideBar .scroller").niceScroll();
+        _bindEvents_()
+
+        $("#sideBar").niceScroll();
 
     return app

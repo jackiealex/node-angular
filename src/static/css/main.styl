@@ -91,20 +91,22 @@ html, body {
 	background: #373d47;
 	width: $sidebarWidth;
 	position: fixed;
-	top: $headerHeight;
+	height: 100%;
 	bottom: 0;
+	top: 60px;
 	left: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition-duration: .3s;
 	text-align: left;
 	.inner-wrap {
-		padding: 20px;
-		
+		padding: 12px;
 	}
 	ul li {
 		padding: 4px;
-		color: #fff;
+		a {
+			color: #fff;
+		}
 	}
 }
 
@@ -115,7 +117,9 @@ html, body {
 }
 
 .nicescroll-cursors {
-	background: #B4B4B4 !important;
+	background: #8F8F8F !important;
 	border: none !important;
+	transform(translate3d(0,0,0));
+	// border-radius: 0 !important;
 }
 

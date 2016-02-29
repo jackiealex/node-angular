@@ -1,7 +1,9 @@
 define ['app/index'], (app)->
 	app.register.controller 'CompanyController', [
 		'$scope'
-		($scope)->
+		'$routeParams'
+		($scope, $routeParams)->
+			debugger
 			setTimeout((args) ->
 				$scope.list = [
 					'google'
