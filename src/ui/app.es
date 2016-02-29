@@ -1,26 +1,19 @@
 // import node module
-import path from 'path';
+import path from 'path'
 
 // import 3rd part module
-import express from 'express';
-import _ from 'lodash';
-import colors from 'colors';
+import express from 'express'
+import _ from 'lodash'
+import colors from 'colors'
+import bodyParser from 'body-parser'
+import cookieParser from 'cookie-parser'
+import session from 'cookie-session'
 
 // import self-defined module
 import renderer from './libs/renderer'
+import api from './libs/api'
 
-// config
-const CONFIG = (() => {
-	let config = null;
-
-	if(process.env['NODE_ENV'] === 'development') {
-		config = require('../config/dev');
-	} else {
-		config = require('../config');
-	}
-	// console.log(process.env['NODE_ENV'], CONFIG);
-	return config
-})();
+import CONFIG from './config/index'
 
 // conditionally import for the developer
 (function (NODE_ENV) {
@@ -28,7 +21,6 @@ const CONFIG = (() => {
 		require('colors');
 	}
 })(process.env['NODE_ENV'])
-
 
 /**
  * define class Application
@@ -61,8 +53,6 @@ class Application {
 			debounceDelay: 1000
 		});
 
-		console.log(target_files)
-
 		gaze.on('all', (action, file_name)=>{
 			console.log(file_name, ' changed');
 			var root = path.resolve(__dirname, '../', '');
@@ -72,6 +62,17 @@ class Application {
 	initialize() {
 		// init server
 		this.server = express();
+
+		// add middleware
+		this.server.use(bodyParser.urlencoded({extended: false}))
+		this.server.use(bodyParser.json())
+		this.server.use(cookieParser())
+		this.server.use(session({
+			name: 'CBXUSS',
+			keys: ['cloudbaoxiao.com', 'rushu.com'],
+			// secureProxy: true
+			secret: 'you never get the secret'
+		}));
 
 		//init delay lab
 		const delayLab = this.options.delayLab
@@ -190,6 +191,48 @@ var app = new Application({
 	]
 });
 
+app.server.get('/login', (req, res)=>{
+	res.render('login.html');
+});
+
+app.server.post('/passport', (req, res)=>{
+	var username = req.body['uid'];
+	var password = req.body['uid'];
+	api.request({
+		method: 'POST',
+		pathname: '/users/0',
+		headers: {
+			'Authorization': 'Bearer ' + req.cookies['access_token']
+		},
+		query: {
+			grant_type: 'password',
+			client_id: 'w2Dl7oc0CimMq1yFtLDcdFVBKWEeIjwTr1wRLngd',
+			client_secret: 'nWx8llO9LmZdxek2g8K7nc6mnWC9rmW1dOEoQ5An',
+			username: username,
+			password: password
+		}
+	}).done((rs)=>{
+		if(rs['node_code']>=0) {
+			res.redirect('/');
+		} else {
+			res.redirect('/login?code='+rs['code']);
+		}
+	});
+});
+
+
 app.server.get('*', (req, res)=>{
-	res.render('index.html');
+	// check is the user is login successfully by using api get its profile, if the use go the page directly
+	api.request({
+		pathname: '/users/0',
+		headers: {
+			'Authorization': 'Bearer ' + req.cookies['access_token']
+		}
+	}).done((rs)=>{
+		if(rs['node_code']>0) {
+			res.render('index.html', {profile_string: JSON.stringify(rs.data)});
+		} else {
+			res.redirect('/login');
+		}
+	});
 })

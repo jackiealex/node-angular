@@ -18,7 +18,10 @@
 	<!-- add socket mechanism -->
 	<script src="/static/js/libs/socket.io-1.4.5.js"></script>
 	<script src="/static/js/boost/socket-client.js"></script>
-	
+	<script>
+		// global user info
+		window._userProfile_ = <%- profile_string %>;
+	</script>
 </head>
 <body ng-controller="MainController">
 	<header id="header" ng-click="alert(1);">
@@ -36,7 +39,7 @@
 						</div>
 					</li>
 					<li><a href="alex">alex</a></li>
-					<li><a href="alex">注销</a></li>
+					<li><a target="_self" href="/login">注销</a></li>
 					<li><a href="alex">关于</a></li>
 				</ul>
 			</div>

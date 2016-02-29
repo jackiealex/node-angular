@@ -1,5 +1,4 @@
 (function(exports) {
-	// global utils
 	exports.Utils = {
 		nextTick: function(fn, delay) {
 			setTimeout(function() {
@@ -54,19 +53,30 @@
 			return (new Function('return ' + string))();
 		},
 		api: function(url, opts) {
+			var baseUrl = 'http://api.cloudbaoxiao.com/dev/';
 			var def = $.Deferred();
+			var regSlashStart = /^\//;
+			if(regSlashStart.test(url)) {
+				url = url.replace(regSlashStart, '');
+			}
+			url = baseUrl + url;
+			console.log(url)
 			opts = $.extend({
 				method: 'get',
 				dataType: 'json',
 				data: {},
 				onError: function(rs) {
 					var msg = rs['msg'] || JSON.stringify(rs);
-					alert(msg);
+					alert(url + ':' + msg);
+					console.warn(url, rs);
 				}
 			}, opts);
 			$.ajax({
 				method: opts['method'],
 				dataType: opts['dataType'],
+				headers: {
+					'X-REIM-JWT': window.__CBX_UTOKEN__ || ''
+				},
 				url: url,
 				data: opts['data'],
 				success: function(rs, succ) {

@@ -41,9 +41,7 @@ define ['app/services/routeResolver'], () ->
                     delay.promise
         )
         .when('/company/:id', route.resolve('Company'))
-        .otherwise {
-            redirectTo: 'http://wwww.baidu.com'
-        }
+        
     ).controller('MainController', ($scope, $route, $routeParams, $location) ->
         $scope.$route = $route
         $scope.$location = $location

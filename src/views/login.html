@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<title>云报销</title>
+	<script>
+		console.log('page start', +new Date)
+	</script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+
+	<meta name="description" content="云报销,报销,让报销简单一点儿">
+	<meta name="keywords" content="云报销,报销,报销简单点">
+	
+	<!-- base css -->
+	<link rel="stylesheet" href="/static/css/mod/login/index.css">
+	
+	<!-- add socket mechanism -->
+	<script src="/static/js/libs/socket.io-1.4.5.js"></script>
+	<script src="/static/js/boost/socket-client.js"></script>
+</head>
+
+<body>
+	<div class="login">
+		<img src="/static/img/logo.png" style="width: 65px; display: block; margin: 20px auto" alt="" />
+		<form method="post" action="/passport">
+			<input placeholder="用户名" type="text" id="uid" />
+			<input placeholder="密码" type="password" id="pwd" />
+			<input type="submit" onsubmit="return login();" value="登录" />
+		</form>
+	</div>
+	<!-- <script src="/static/js/libs/jquery/jquery.js"></script> -->
+	<!-- <script src="/static/js/boost/utils.js"></script> -->
+	<script>
+		function getById(id) {
+			return document.getElementById(id);
+		};
+
+		//写cookies
+		function setCookie(name, value, secs) {
+		    var date = +new Date + secs * 1000;
+		    document.cookie = name + "=" + value + ";expires=" + date.toUTCString();
+		};
+
+		function login() {
+
+			var uid = getById('uid');
+			var pwd = getById('pwd');
+
+			uid = uid.value;
+			pwd = pwd.value;
+			
+			return true;
+		}
+	</script>
+</body>
+</html>
