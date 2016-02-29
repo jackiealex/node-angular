@@ -1,0 +1,10 @@
+{
+    "watcher": {
+        "static": ["static/**/*.*"],
+        "ui": ["libs/**/*", "model/**/*", "routes/**/*", "extend/**/*.js", "handler/**/*", "*.coffee", "config.json"]
+    },
+    "http_port": 8889,
+    "static_CDN": "",
+    "remote_api_domain": "api.cloudbaoxiao.com",
+    "branch": "dev"
+}

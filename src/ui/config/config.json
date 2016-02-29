@@ -4,5 +4,6 @@
         "ui": ["libs/**/*", "model/**/*", "routes/**/*", "extend/**/*.js", "handler/**/*", "*.coffee", "config.json"]
     },
     "http_port": 8889,
-    "static_CDN": ""
+    "static_CDN": "",
+    "remote_api_demain": "http://api.cloudbaoxiao.com/dev/",
 }
