@@ -193,7 +193,33 @@ var app = new Application({
 
 app.server.get('/login', (req, res)=>{
 	res.render('login.html');
-})
+});
+
+app.server.post('/passport', (req, res)=>{
+	var username = req.body['uid'];
+	var password = req.body['uid'];
+	api.request({
+		method: 'POST',
+		pathname: '/users/0',
+		headers: {
+			'Authorization': 'Bearer ' + req.cookies['access_token']
+		},
+		query: {
+			grant_type: 'password',
+			client_id: 'w2Dl7oc0CimMq1yFtLDcdFVBKWEeIjwTr1wRLngd',
+			client_secret: 'nWx8llO9LmZdxek2g8K7nc6mnWC9rmW1dOEoQ5An',
+			username: username,
+			password: password
+		}
+	}).done((rs)=>{
+		if(rs['node_code']>=0) {
+			res.redirect('/');
+		} else {
+			res.redirect('/login?code='+rs['code']);
+		}
+	});
+});
+
 
 app.server.get('*', (req, res)=>{
 	// check is the user is login successfully by using api get its profile, if the use go the page directly

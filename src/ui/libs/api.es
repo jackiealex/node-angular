@@ -10,14 +10,14 @@ function syslog(type, msg) {
     console.log(type, msg)
 }
 
+// 因为云报销的状态码大于0 都可能是OK的
 const NODE_CODE = {
-    NODE_TIMEOUT: 4408,
-    PARSE_ERROR: 10000,
+    NODE_TIMEOUT: -4408,
+    PARSE_ERROR: -1000,
 }
  
 function getURIComponent(req) {
     var urlStr = req.url
-    debugger
     var urlComponent = {
         protocol: 'http:',
         // host: if CONFIG['mode'] is 'development' then _CONST_HOST_NAME_ else _CONST_HOST_IP_
