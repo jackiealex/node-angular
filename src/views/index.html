@@ -20,6 +20,7 @@
 	<script src="/static/js/boost/socket-client.js"></script>
 	<script>
 		// global user info
+		window._env_ = "<%= env %>";
 		window._userProfile_ = <%- profile_string %>;
 	</script>
 </head>
@@ -57,11 +58,14 @@
 				<li>
 					<a href="/#/company/12?r=1212">某某公司</a>
 				</li>
-			<% for(var i =0 ;i<30; i++) { %>
+				<% for(var i =0 ;i<30; i++) { %>
 				<li>
 					<a href="/#/test/<%=i %>">菜单项目<%= i %></a>
 				</li>
-			<% } %>
+				<% } %>
+				<li>
+					<a href="/#/dsfd/dsfd">whoami</a>
+				</li>
 			</ul>
 		</div>
 	</div>

@@ -2,7 +2,7 @@
 require.config({
     baseUrl: '/static/js'
     waitSeconds: 20
-    urlArgs: "_s=" + (+new Date)
+    urlArgs: if window._env_ is 'development' then "_s=" + (+new Date) else ''
     paths: {
         # 'domReady': 'libs/domReady/domReady'
         'angular': 'libs/angular/angular'
@@ -10,6 +10,7 @@ require.config({
         'jquery': 'libs/jquery/jquery'
         'nicescroll': 'libs/jquery.nicescroll/jquery.nicescroll.min'
         'shared': '../app/shared/'
+        # why app for ../app is ok but
         'app': '../app'
     }
     shim: {

@@ -5,14 +5,6 @@ define([], function () {
     var viewsDirectory = '/static/app';
     var controllersDirectory = '/static/app';
 
-    function resolveDependencies($q, $rootScope, dependencies) {
-        var defer = $q.defer();
-        require(dependencies, function () {
-            defer.resolve();
-            $rootScope.$apply()
-        });
-        return defer.promise;
-    };
     /**
      * [RouteResolver description] this is a constructor
      */
@@ -38,22 +30,29 @@ define([], function () {
                 var staticTemplatePath = [
                     viewsDirectory,
                     parentPath,
-                    'index.html'
+                    'index.html' //we define index.html as entry file which can inucude children files
                 ].join('/');
 
+                // this tell angular where to load the template
                 routeDef.templateUrl = staticTemplatePath;
-                // this get the controller in angular.module('app').controller()
+                // this get the controller in angular.module('app').controller('modName'), it tell anguarl where to use it
                 routeDef.controller = modName + "Controller";
                 routeDef.secure = (secure) ? secure : false;
                 routeDef.resolve = {
-                    load: ['$q', '$rootScope', function ($q, $rootScope) {
+                    done: ['$q', '$rootScope', function ($q, $rootScope) {
                         var dependencies = [staticModPath];
-                        return resolveDependencies($q, $rootScope, dependencies);
+
+                        var defer = $q.defer();
+
+                        require(dependencies, function () {
+                            defer.resolve();
+                            // $rootScope.$apply();
+                        });
+
+                        return defer.promise;
                     }]
                 };
-
                 return routeDef;
-
             }
         };
     };

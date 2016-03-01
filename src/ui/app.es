@@ -197,7 +197,7 @@ app.server.get('/login', (req, res)=>{
 
 app.server.post('/passport', (req, res)=>{
 	var username = req.body['uid'];
-	var password = req.body['uid'];
+	var password = req.body['pwd'];
 	api.request({
 		method: 'POST',
 		pathname: '/users/0',
@@ -230,7 +230,7 @@ app.server.get('*', (req, res)=>{
 		}
 	}).done((rs)=>{
 		if(rs['node_code']>0) {
-			res.render('index.html', {profile_string: JSON.stringify(rs.data)});
+			res.render('index.html', {profile_string: JSON.stringify(rs.data), env: process.env['NODE_ENV']});
 		} else {
 			res.redirect('/login');
 		}

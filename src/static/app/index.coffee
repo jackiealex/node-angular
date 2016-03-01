@@ -1,7 +1,7 @@
 define ['shared/services/routeResolver'], () ->
 
     app = angular.module('reimApp', ['ngRoute', 'routeResolverServices']);
-    app.config( ($routeProvider, $locationProvider, routeResolverProvider, $controllerProvider, $compileProvider, $filterProvider, $provide)->
+    app.config(($routeProvider, $locationProvider, routeResolverProvider, $controllerProvider, $compileProvider, $filterProvider, $provide)->
 
         $locationProvider.html5Mode(true);
 
@@ -17,27 +17,30 @@ define ['shared/services/routeResolver'], () ->
         route = routeResolverProvider['route'];
 
         $routeProvider
-        .when('/test/:id',
+        .when('/test/:id', {
             templateUrl: '/static/app/test/test.html'
             controller: 'TestController'
             resolve:
-                delay: ($q, $timeout) ->
-                    console.log('page end', +new Date)
-                    delay = $q.defer()
-                    $timeout delay.resolve, 0
-                    delay.promise
-                resolver: ()->
-                    return;
-                    require ['app/controllers/TestController'], (Controller) ->
-                    
-        )
+                done: ($q, $rootScope)->
+                    debugger
+                    def = $q.defer();
+ 
+                    require ['app/test/TestController'], () ->
+                        setTimeout ()->
+                            console.log(+1, +new Date)
+                            def.resolve()
+                        , 100
+                    return def.promise;
+
+        })
         .when('/test2/:id',
             templateUrl: '/static/app/test/test2.html'
-            # controller: 'TestController'
+            controller: 'TestController'
             resolve:
-                delay: ($q, $timeout) ->
+                delayTest: ($q, $timeout, $rootScope) ->
                     delay = $q.defer()
                     $timeout delay.resolve, 0
+                    $rootScope.$apply()
                     delay.promise
         )
         .when('/company/:id', route.resolve('Company'))
@@ -52,14 +55,6 @@ define ['shared/services/routeResolver'], () ->
         $scope.$routeParams = $routeParams
         return
     );
-
-    app.controller('TestController', [
-        "$scope"
-        ($scope) ->
-            $scope.a = 12;
-            $scope.onClick = ()->
-                $scope.a = 'a' + +Date.now()
-    ]);
 
     angular.bootstrap(document, ['reimApp']);
 

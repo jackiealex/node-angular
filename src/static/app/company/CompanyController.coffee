@@ -3,7 +3,6 @@ define ['app/index'], (app)->
 		'$scope'
 		'$routeParams'
 		($scope, $routeParams)->
-			debugger
 			setTimeout((args) ->
 				$scope.list = [
 					'google'
