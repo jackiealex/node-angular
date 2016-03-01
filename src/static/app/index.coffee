@@ -1,4 +1,4 @@
-define ['app/services/routeResolver'], () ->
+define ['shared/services/routeResolver'], () ->
 
     app = angular.module('reimApp', ['ngRoute', 'routeResolverServices']);
     app.config( ($routeProvider, $locationProvider, routeResolverProvider, $controllerProvider, $compileProvider, $filterProvider, $provide)->
@@ -14,11 +14,11 @@ define ['app/services/routeResolver'], () ->
             service: $provide.service
         };
 
-        route = routeResolverProvider.route;
+        route = routeResolverProvider['route'];
 
         $routeProvider
         .when('/test/:id',
-            templateUrl: '/static/views/test.html'
+            templateUrl: '/static/app/test/test.html'
             controller: 'TestController'
             resolve:
                 delay: ($q, $timeout) ->
@@ -32,7 +32,7 @@ define ['app/services/routeResolver'], () ->
                     
         )
         .when('/test2/:id',
-            templateUrl: '/static/views/test2.html'
+            templateUrl: '/static/app/test/test2.html'
             # controller: 'TestController'
             resolve:
                 delay: ($q, $timeout) ->
@@ -41,6 +41,10 @@ define ['app/services/routeResolver'], () ->
                     delay.promise
         )
         .when('/company/:id', route.resolve('Company'))
+        .when('/404', route.resolve('404')).
+        otherwise {
+            redirectTo: '/404'
+        }
         
     ).controller('MainController', ($scope, $route, $routeParams, $location) ->
         $scope.$route = $route

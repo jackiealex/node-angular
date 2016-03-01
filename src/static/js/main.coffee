@@ -9,6 +9,8 @@ require.config({
         'angular-route': 'libs/angular-route/angular-route'
         'jquery': 'libs/jquery/jquery'
         'nicescroll': 'libs/jquery.nicescroll/jquery.nicescroll.min'
+        'shared': '../app/shared/'
+        'app': '../app'
     }
     shim: {
         'angular': {
