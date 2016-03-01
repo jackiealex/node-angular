@@ -48,7 +48,6 @@ define ['shared/services/routeResolver'], () ->
         otherwise {
             redirectTo: '/404'
         }
-        
     ).controller('MainController', ($scope, $route, $routeParams, $location) ->
         $scope.$route = $route
         $scope.$location = $location
