@@ -9,11 +9,17 @@ import CONFIG  from '../config'
 function syslog(type, msg) {
     console.log(type, msg)
 }
+// var log = console.log;
+// console.log = function () {
+//     var e = new Error()
+//     log(e)
+// }
 
 // 因为云报销的状态码大于0 都可能是OK的
 const NODE_CODE = {
     NODE_TIMEOUT: -4408,
     PARSE_ERROR: -1000,
+    LENGTH_REQUIRED_ERROR: -4411,
 }
  
 function getURIComponent(req) {
@@ -36,7 +42,7 @@ function getURIComponent(req) {
     var options = {
         uri: '',
         headers: headers,
-        method: req['method'] || 'GET',
+        method: (req['method'] || 'GET').toUpperCase(),
         timeout: req['timeout'] || 20 * 1000,
     }
 
@@ -46,6 +52,8 @@ function getURIComponent(req) {
         options.uri = url.format(urlComponent)
     }
 
+    options.url = options.uri;
+
     return options;
 }
 function doRequest(req = {}) {
@@ -54,13 +62,14 @@ function doRequest(req = {}) {
     //     method: 'get' 
     //     url: 'http://users'
     //     pathname: '/dfdf'
+    //     body
     //     query:
     //         id: '123'
     var def = Q.defer()
+    var options = getURIComponent(req);
 
-    var options = getURIComponent(req)
+    // console.log(options, req)
 
-    console.log(options)
     var reqObject = request(options, (err, res, body)=>{
         var data = null;
         // timeout
@@ -71,7 +80,7 @@ function doRequest(req = {}) {
         }
         // check if remote server has the api
         if(res.statusCode > 400) {
-            def.resolve({data: null, node_code: res.statusCode, msg: body})
+            def.resolve({data: {code: res.statusCode}, node_code: NODE_CODE['LENGTH_REQUIRED_ERROR'], msg: body})
             syslog(3, {msg: body, err: res.statusCode})
             return
         }
@@ -85,6 +94,20 @@ function doRequest(req = {}) {
         }
         def.resolve({data: data, msg: data['msg'], node_code: data['status']})
     });
+
+    var reqBody = req['body'];
+    if(reqBody && options.method !== 'GET') {
+        var form = reqObject.form();
+        for(var k in reqBody) {
+            var v = reqBody[k];
+            var vArray = [].concat(v);
+            for(var i=0;i<vArray.length;i++) {
+                form.append(k, vArray[i]);
+                console.log("====", k, vArray[i]);
+            }
+        }
+    }
+
     return def.promise
 }
 

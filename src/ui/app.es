@@ -196,15 +196,12 @@ app.server.get('/login', (req, res)=>{
 });
 
 app.server.post('/passport', (req, res)=>{
-	var username = req.body['uid'];
-	var password = req.body['pwd'];
+	var username = req.body['username'];
+	var password = req.body['password'];
 	api.request({
 		method: 'POST',
-		pathname: '/users/0',
-		headers: {
-			'Authorization': 'Bearer ' + req.cookies['access_token']
-		},
-		query: {
+		pathname: '/oauth2',
+		body: {
 			grant_type: 'password',
 			client_id: 'w2Dl7oc0CimMq1yFtLDcdFVBKWEeIjwTr1wRLngd',
 			client_secret: 'nWx8llO9LmZdxek2g8K7nc6mnWC9rmW1dOEoQ5An',
@@ -212,10 +209,15 @@ app.server.post('/passport', (req, res)=>{
 			password: password
 		}
 	}).done((rs)=>{
-		if(rs['node_code']>=0) {
-			res.redirect('/');
+		console.log(rs)
+		rs = {
+			node_code: 1,
+			dfsd: 'dfsd'
+		}
+		if(rs['node_code']>0) {
+			res.redirect('/')
 		} else {
-			res.redirect('/login?code='+rs['code']);
+			res.redirect('/login?code='+rs['node_code'] || '');
 		}
 	});
 });
@@ -229,6 +231,7 @@ app.server.get('*', (req, res)=>{
 			'Authorization': 'Bearer ' + req.cookies['access_token']
 		}
 	}).done((rs)=>{
+		// console.log(rs)
 		if(rs['node_code']>0) {
 			res.render('index.html', {profile_string: JSON.stringify(rs.data), env: process.env['NODE_ENV']});
 		} else {

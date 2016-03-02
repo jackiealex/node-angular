@@ -19,7 +19,7 @@ define([], function () {
                 var routeDef = {};
 
                 // this make the route to load template.html
-                var parentPath = modName
+                var parentPath = modName.toLowerCase();
 
                 var staticModPath = [
                     controllersDirectory,

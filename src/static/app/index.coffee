@@ -17,32 +17,22 @@ define ['shared/services/routeResolver'], () ->
         route = routeResolverProvider['route'];
 
         $routeProvider
+        .when('/', route.resolve('Home'))
         .when('/test/:id', {
             templateUrl: '/static/app/test/test.html'
             controller: 'TestController'
             resolve:
                 done: ($q, $rootScope)->
-                    debugger
                     def = $q.defer();
  
                     require ['app/test/TestController'], () ->
                         setTimeout ()->
-                            console.log(+1, +new Date)
                             def.resolve()
                         , 100
+                        
                     return def.promise;
 
         })
-        .when('/test2/:id',
-            templateUrl: '/static/app/test/test2.html'
-            controller: 'TestController'
-            resolve:
-                delayTest: ($q, $timeout, $rootScope) ->
-                    delay = $q.defer()
-                    $timeout delay.resolve, 0
-                    $rootScope.$apply()
-                    delay.promise
-        )
         .when('/company/:id', route.resolve('Company'))
         .when('/404', route.resolve('404')).
         otherwise {
