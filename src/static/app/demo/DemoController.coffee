@@ -16,4 +16,15 @@ define ['app/index'], (app)->
 			, 1000* 3)
 	]
 
+define ['app/index'], (app)->
+	
+	app.register.controller '--replace-me-Controller', [
+		'$scope'
+		($scope)->
+			$scope.$apply()
+			
+	]
+
+	    
+
 	    

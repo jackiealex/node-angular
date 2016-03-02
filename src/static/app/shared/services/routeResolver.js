@@ -12,41 +12,68 @@ define([], function () {
         this.$get = function () {
             return this;
         };
+
+        /**
+         * [resolve description]
+         * @param  {[type]} modName templates/List or Template
+         * if modName equals templates/List, the template path will be template/list.html and the controller path will be templates/ListController
+         * if modName equals Hello, the template path will be template/hello.html and the controller path will be templates/HelloController
+         * @return {[type]}         [path object]
+         */
+        function getTemplateAndControllerPath(modName) {
+
+            var slashLastIndex = modName.lastIndexOf('/');
+            var parentPath = modName.toLowerCase();
+            var prefixController = '';
+            if(slashLastIndex!=-1) {
+                parentPath = modName.substr(0, slashLastIndex).toLowerCase();
+                modName = modName.substr(slashLastIndex + 1);
+                modName = modName[0].toUpperCase() + modName.toString().slice(1);
+                prefixController = parentPath[0].toUpperCase() + parentPath.toString().slice(1);
+            }
+
+            var staticControllerPath = [
+                controllersDirectory,
+                parentPath,
+                modName + 'Controller.js'
+            ].join('/');
+
+            var staticTemplatePath = [
+                viewsDirectory,
+                parentPath,
+                slashLastIndex !=-1? modName.toLowerCase() + '.html': 'index.html' //we define index.html as entry file which can inucude children files
+            ].join('/');
+
+            return {
+                templateUrl: staticTemplatePath,
+                controllerUrl: staticControllerPath,
+                controllerName: prefixController + modName + 'Controller'
+            }
+        }
        
         this.route = {
+            
             resolve: function (modName, secure) {
 
                 var routeDef = {};
 
-                // this make the route to load template.html
-                var parentPath = modName.toLowerCase();
+                var resource = getTemplateAndControllerPath(modName);
+                routeDef.controller = resource['controllerName'];
+                routeDef.templateUrl = resource['templateUrl'];
 
-                var staticModPath = [
-                    controllersDirectory,
-                    parentPath,
-                    modName + 'Controller.js'
-                ].join('/');
-
-                var staticTemplatePath = [
-                    viewsDirectory,
-                    parentPath,
-                    'index.html' //we define index.html as entry file which can inucude children files
-                ].join('/');
-
-                // this tell angular where to load the template
-                routeDef.templateUrl = staticTemplatePath;
-                // this get the controller in angular.module('app').controller('modName'), it tell anguarl where to use it
-                routeDef.controller = modName + "Controller";
                 routeDef.secure = (secure) ? secure : false;
+
                 routeDef.resolve = {
                     done: ['$q', '$rootScope', function ($q, $rootScope) {
-                        var dependencies = [staticModPath];
+                        var dependencies = [resource['controllerUrl']];
 
                         var defer = $q.defer();
 
                         require(dependencies, function () {
                             defer.resolve();
                             // $rootScope.$apply();
+                        }, function error(err) {
+                            console.error('error');
                         });
 
                         return defer.promise;

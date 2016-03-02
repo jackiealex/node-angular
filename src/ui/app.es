@@ -231,7 +231,7 @@ app.server.get('*', (req, res)=>{
 			'Authorization': 'Bearer ' + req.cookies['access_token']
 		}
 	}).done((rs)=>{
-		// console.log(rs)
+		console.log(rs)
 		if(rs['node_code']>0) {
 			res.render('index.html', {profile_string: JSON.stringify(rs.data), env: process.env['NODE_ENV']});
 		} else {

@@ -12,6 +12,10 @@ require.config({
         'shared': '../app/shared/'
         # why app for ../app is ok but
         'app': '../app'
+        'auto-grow-input': 'libs/jquery.auto-grow-input.min',
+        'sortable':'libs/Sortable/Sortable.min',
+        'ng-sortable':'libs/ng-sortable/ng-sortable',
+        'oc.lazyLoad':'libs/oclazyload/dist/ocLazyLoad.min',
     }
     shim: {
         'angular': {
@@ -20,7 +24,9 @@ require.config({
         'angular-route': {
             deps: ['angular']
         }
-        'app/index': ['jquery', 'angular', 'angular-route']
+        'oc.lazyLoad': ['sortable']
+        'ng-sortable': ['sortable']
+        'app/index': ['jquery', 'angular', 'angular-route', 'oc.lazyLoad']
     }
     deps: ['app/index']
 });

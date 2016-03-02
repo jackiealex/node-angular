@@ -1,0 +1,337 @@
+<link rel="stylesheet" href="/static/css/mod/template/list.css"/>
+<!-- <link rel="stylesheet" href="/static/css/widgets/loading-default.css"/> -->
+<div class="mod mod-template-list">
+    <div class="page-content-area">
+        <div class="ui-loading-layer" ng-if="!isLoaded">
+            <div class="ui-loading-icon"></div>
+        </div>
+        <div class="header">
+            <a href="javascript:void(0)" class="btn-add ui-button" ng-click="onAddTemplate($event)"><img src="/static/img/mod/template/icon/plus@2x.png" alt="">新建模板</a>
+        </div>
+        <div class="paper" ng-repeat="templateItem in templateArray" ng-init="initTemplateItem(templateItem, $index)" data-id="{{templateItem.id}}" data-index="{{$index}}">
+            <div class="header-wrap">
+                <div class="paper-header">
+                    <div class="name" ng-click="onEditTemplateTitle(templateItem, $event)">
+                        <input type="text" disabled ng-model="templateItem.name" ng-blur="onFocusOut(templateItem, $event)" ng-keyup="onTextLengthChange(templateItem, $event)">
+                        <span class="icon"></span>
+                    </div>
+                    <p class="buttons">
+                        <span class="button btn-eye" ng-click="onPreviewTemplate($index, $event)"></span>
+                        <span class="button btn-trash" ng-click="onRemoveTemplate(templateItem, $index, $event)"></span>
+                        <span class="button btn-accordion transition" ng-click="onAccordionTemplate(templateItem, $index, $event)"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="wrap transition">
+                <div class="paper-content">
+                    <div class="title">
+                        内容设置
+                    </div>
+                    <div class="table-container" ng-sortable="makeTableSortable">
+                        <div class="field-table" ng-repeat-start="tableItem in templateItem.config" ng-if="tableItem.MODE != 'STATE_EDITING'">
+                            <div class="line"></div>
+                            <h4 class="field-table-title">{{tableItem.name}}
+                                <p class="buttons">
+                                    <span class="button btn-trash" ng-click="onRemoveTable(templateItem ,$event, $index)"></span>
+                                    <span class="button btn-edit" ng-click="onEditTable(templateItem, $event, $index, $parent.$parent.$index)"></span>
+                                    <span class="button btn-drag transition" ng-click="onDragTable($event, $index, $parent.$index)"></span>
+                                </p>
+                            </h4>
+                            <div class="column-wrap table-layout">
+                                <h4 class="field-table-label table-cell"> 字段组 </h4>
+                                <div class="field-table-content table-cell">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th ng-repeat-start="tableColumn in tableItem.children" ng-if="tableColumn.type!=4">{{tableColumn.name}}</th>
+                                                <th ng-if="tableColumn.type==4">{{tableColumn.name}}－户名</th>
+                                                <th ng-if="tableColumn.type==4">{{tableColumn.name}}－账号</th>
+                                                <th ng-if="tableColumn.type==4">{{tableColumn.name}}－银行</th>
+                                                <th ng-repeat-end ng-if="tableColumn.type==4">{{tableColumn.name}}－支行</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td ng-repeat-start="i in tableItem.children" ng-if="i.type!=4"></td>
+                                                <td ng-if="i.type==4"></td>
+                                                <td ng-if="i.type==4"></td>
+                                                <td ng-if="i.type==4"></td>
+                                                <td ng-repeat-end ng-if="i.type==4"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>               
+                            </div>
+                        </div>
+                        <div class="field-group" ng-repeat-end ng-if="tableItem.MODE == 'STATE_EDITING'" data-index="{{$index}}">
+                            <h4 class="field-group-title">
+                                <div class="field-input">
+                                    <input type="text" placeholder="字段组名称" ng-model="tableItem.name" ng-keyup="onTextLengthChange2(tableItem, $event)">
+                                </div>
+                            </h4>
+                            <div class="column-wrap table-layout">
+                                <h4 class="field-group-label table-cell"> 字段组 </h4>
+                                <div class="field-group-rows table-cell">
+                                    <div class="fields field-options table-layout" ng-repeat="editColumnItem in tableItem.children">
+                                        <div class="table-cell field-type">
+                                            <div class="field-select field" ng-dropdown="makeDropdown" param-object="editColumnItem" data="fieldTypeArray">
+                                                <i class="icon">
+                                                    <img src="/static/img/mod/template/icon/triangle@2x.png" alt="" />
+                                                </i>
+                                                <!-- <input class="" autocomplete="off" value="" placeholder="类型" editable="false"> -->
+                                                <div class="text font-placeholder">类型</div>
+                                                <div class="option-list none">
+                                                    <div class="item" ng-repeat="item in fieldTypeArray" data-value="{{item.value}}">{{item.text}}</div>
+                                                </div> 
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="table-cell field-name">
+                                            <div class="field-input field">
+                                                <input type="text" placeholder="字段名称" ng-model="editColumnItem.name" ng-keyup="onTextLengthChange2(editColumnItem, $event)">
+                                            </div>
+                                        </div>
+                                        <div class="table-cell field-checkbox white" ng-class="{checked: editColumnItem.required != '0'}" ng-click="editColumnItem.required= 1 - editColumnItem.required">
+                                            <i class="icon"></i>
+                                            <label>必填</label>
+                                        </div>
+                                        <div class="button field table-cell">
+                                            <p class="btn-trash" ng-click="onRemoveColumnEditConfig($event, tableItem, $index)"></p>
+                                        </div>
+                                        <div class="field-radio-options" ng-if="editColumnItem.type == 2">
+                                            <div class="field-radio-option" ng-repeat="inputItem in editColumnItem.property.options track by $index">
+                                                <div class="field-input">
+                                                    <input type="text" placeholder="选项" ng-model="editColumnItem.property.options[$index]">
+                                                </div>
+                                                <p class="btn-add-input transition" ng-class="{'btn-delete-input': $index < editColumnItem.property.options.length -1}" ng-click="setOptionsForRadioGroup($event, tableItem, $index, $parent.$index)"></p>
+                                            </div>
+                                        </div>
+                                        <div class="field-bank-options" ng-if="editColumnItem.type == 4">
+                                            <div class="field-checkbox white" ng-class="{checked: editColumnItem.property.bank_account_type}" ng-click="editColumnItem.property.bank_account_type=1-editColumnItem.property.bank_account_type">
+                                                <i class="icon"></i>
+                                                <label>设为付款银行帐户</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field-group-footer">
+                                <p class="buttons">
+                                    <span class="button btn-add" ng-click="onAddColumnEditConfig(tableItem, $event, $index)">添加字段</span>
+                                    <span class="button btn-cancel" ng-click="onCancelColumnsEditConfig(tableItem, templateItem, $index)">取消</span>
+                                    <span class="button btn-save" ng-click="onSaveColumnsEditConfig(templateItem, $index, $event)">确定</span>
+                                </p>
+                            </div>           
+                        </div>
+                    </div>
+                    <div class="field-group row-group" style="padding-bottom: 0">
+                        <div class="line"></div>
+                        <div class="column-wrap table-layout">
+                            <h4 class="field-group-label table-cell"> 字段组 </h4>
+                            <div class="table-cell">
+                                <a href="javascript:void(0)" class="btn-add-field-group ui-button" ng-click="onAddTableConfig(templateItem, $event, $index)"><img src="/static/img/mod/template/icon/plus@2x.png" alt="">添加</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-table default-field-table" ng-if=0>
+                        <div class="line"></div>
+                        <h4 class="field-table-title">消费明细
+                            <p class="buttons">
+                                <span class="button btn-eye" ng-class="{'btn-clicked': templateItem.customDetail}" ng-click="templateItem.customDetail = !templateItem.customDetail;"></span>
+                            </p>
+                        </h4>
+                        <div class="column-wrap table-layout">
+                            <h4 class="field-table-label table-cell" style="margin: 0"> 字段组 </h4>
+                            <div class="table-cell field-table-content-multi-row">
+                                <div class="field-checkbox" ng-click="templateItem.options.is_grouping_by_cate = 1-templateItem.options.is_grouping_by_cate" ng-class="{checked: templateItem.options.is_grouping_by_cate}" style="margin-bottom: 0">
+                                    <span class="icon"></span>
+                                    <label>消费按类目分类</label>
+                                </div>
+                                <div class="field-table-content" style="margin-top: 20px;" ng-show="templateItem.customDetail" ng-if="!templateItem.options.is_grouping_by_cate">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>类目</th>
+                                                <th>日期</th>
+                                                <th>商家</th>
+                                                <th>人员</th>
+                                                <th>备注</th>
+                                                <th>金额</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>类目A</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>类目B</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div ng-if="templateItem.options.is_grouping_by_cate" class="category-table" ng-show="templateItem.customDetail">
+                                    <h4 class="title-category">类目A</h4>
+                                    <div class="field-table-content">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>日期</th>
+                                                    <th>商家</th>
+                                                    <th>人员</th>
+                                                    <th>备注</th>
+                                                    <th>金额</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div ng-if="templateItem.options.is_grouping_by_cate" class="category-table" ng-show="templateItem.customDetail">
+                                    <h4 class="title-category">类目B</h4>
+                                    <div class="field-table-content">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>日期</th>
+                                                    <th>商家</th>
+                                                    <th>人员</th>
+                                                    <th>备注</th>
+                                                    <th>金额</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> 
+                                </div> 
+                            </div>             
+                        </div>
+                    </div>
+                    <div class="field-table default-field-table" ng-if=0>
+                        <div class="line" style="margin-bottom: 30px;"></div>
+                        <div class="column-wrap table-layout">
+                            <h4 class="field-table-label table-cell" style="margin: 0"> 字段组 </h4>
+                            <div class="table-cell field-table-content-multi-row">
+                                <h4 class="field-table-title" style="padding-left: 0; margin: 0">流转意见
+                                    <p class="buttons">
+                                        <span class="button btn-eye" ng-class="{'btn-clicked': templateItem.turnOpinion}"  ng-click="templateItem.turnOpinion = !templateItem.turnOpinion;"></span>
+                                    </p>
+                                </h4>
+                                <div class="field-table-content" style="margin-top: 20px;" ng-show="templateItem.turnOpinion">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>人员</th>
+                                                <th>职位</th>
+                                                <th>时间</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>  
+                            </div>             
+                        </div>
+                    </div>
+                    <div class="field-table default-field-table">
+                        <div class="line" style="margin-bottom: 30px"></div>
+                        <div class="column-wrap table-layout">
+                            <h4 class="field-table-label table-cell"> 适用范围 </h4>
+                            <div class="table-cell field-table-content-multi-row">
+                                <div class="field-checkbox" ng-class="{checked: templateItem['type'].indexOf($index+'')!=-1}" style="{{$last?'margin-bottom: 0':''}}" ng-repeat="templateTypeItem in templateTypeArray" ng-click="toggleCheckbox($event, $index); updateTemplateType($event, templateItem, $index)">
+                                    <i class="icon"></i>
+                                    <label>{{templateTypeItem}}</label>
+                                </div>
+                            </div>             
+                        </div>
+                    </div>
+                </div>
+                <div class="field-table print-settings default-field-table" ng-if=0>
+                    <div style="padding: 42px 0;">
+                        <h4 class="field-table-title">打印设置
+                            <p class="buttons">
+                                <span class="button btn-accordion" ng-click="togglePrintSettings($event)"></span>
+                            </p>
+                        </h4>
+                    </div>
+                    <div class="group-container none">
+                        <div class="column-wrap table-layout">
+                            <h4 class="field-table-label table-cell"> 表头显示 </h4>
+                            <div class="table-cell field-table-content-multi-row">
+                                <div class="field-checkbox" style="{{$last?'margin-bottom:0':''}}" ng-class="{checked: tableHeaderOptionsItem.checked, disabled: tableHeaderOptionsItem.disabled}" ng-click="toggleCheckbox($event)" ng-repeat="tableHeaderOptionsItem in tableHeaderOptions">
+                                    <i class="icon"></i>
+                                    <label ng-click="onOptionItemChange(templateItem, tableHeaderOptionsItem, $event);">{{tableHeaderOptionsItem.text}}</label>
+                                </div>
+                            </div>             
+                        </div>
+                        <div class="column-wrap table-layout">
+                            <h4 class="field-table-label table-cell"> 页脚显示 </h4>
+                            <div class="table-cell field-table-content-multi-row">
+                                <div class="field-checkbox checked" style="{{$last?'margin-bottom: 0':''}}" ng-click="toggleCheckbox($event)" ng-repeat="tableFooterOptionsItem in tableFooterOptions">
+                                    <i class="icon"></i>
+                                    <label ng-click="onOptionItemChange(templateItem, tableFooterOptionsItem, $event);">{{tableFooterOptionsItem.text}}</label>
+                                </div>
+                            </div>             
+                        </div>
+                        <div class="column-wrap table-layout pager-size" style="border-bottom: 1px solid #f2f6fa;" ng-if="true">
+                            <h4 class="field-table-label table-cell"> 打印模板 </h4>
+                            <div class="table-cell field-table-content-multi-row">
+                                <div class="field-radio" ng-class="{checked: $first}" ng-click="onRadioGroupClick($event)" ng-repeat="paperSizeItem in paperAvailableSize">
+                                    <i class="icon"></i>
+                                    <label ng-click="onOptionItemChange(templateItem, paperSizeItem, $event);">{{paperSizeItem.text}}</label>
+                                </div>
+                            </div>             
+                        </div>
+                    </div>
+                </div>
+                <div class="paper-footer">
+                    <a href="javascript:void(0)" class="btn-cancel ui-button" ng-click="onCancelTemplate(templateItem, $event, $index)"><img src="/static/img/mod/template/icon/cancel@2x.png" alt="">取消</a>
+                    <a href="javascript:void(0)" style="display: none;" class="btn-preview ui-button" ng-click="onPreviewTemplate($event, $index)"><img src="/static/img/mod/template/icon/eye@2x.png" alt="">预览</a>
+                    <a href="javascript:void(0)" class="btn-save ui-button" ng-click="onSaveTemplate(templateItem, $event, $index)"><img src="/static/img/mod/template/icon/yes@2x.png" alt="">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/libs/jquery.auto-grow-input.min.js"></script>
+<script src="/static/plugins/cloud-dialog/dialog.js"></script>
+<script src="/static/plugins/cloud-dropdown/index.js"></script>
+<script src="/static/js/libs/Sortable.min.js"></script>
+<script src="/static/js/libs/ng-sortable.js"></script>
+
+
+<link rel="stylesheet" href="/static/css/libs/animate.css">
+<link rel="stylesheet" href="/static/plugins/cloud-dialog/dialog.css">

@@ -21,11 +21,11 @@
 	<script>
 		// global user info
 		window._env_ = "<%= env %>";
-		window._userProfile_ = <%- profile_string %>;
+		window._userProfile_ = <%- profile_string %>['data'];
 	</script>
 </head>
 <body ng-controller="MainController">
-	<header id="header" ng-click="alert(1);">
+	<header id="header">
 		<div class="inner-wrap">
 			<div class="header-logo">
 				<img class="logo" src="/static/img/logo.png" alt="">
@@ -39,9 +39,9 @@
 							<input type="text" placeholder="搜索">
 						</div>
 					</li>
-					<li><a href="alex">alex</a></li>
+					<li><a href="" data-id="{{userProfile.id}}">{{userProfile.nickname}}</a></li>
 					<li><a target="_self" href="/login">注销</a></li>
-					<li><a href="alex">关于</a></li>
+					<!-- <li><a href="alex">关于</a></li> -->
 				</ul>
 			</div>
 	 	</div>
@@ -50,19 +50,14 @@
 		<div class="inner-wrap scroller">
 			<ul>
 				<li>
-					<a href="/#/test/12">test/12</a>
+					<a href="/#/report">新建报销单</a>
 				</li>
 				<li>
-					<a href="/#/test2/12?r=1212">test/12</a>
+					<a href="/#/templates">报销单模版</a>
 				</li>
 				<li>
 					<a href="/#/company/12?r=1212">某某公司</a>
 				</li>
-				<% for(var i =0 ;i<30; i++) { %>
-				<li>
-					<a href="/#/test/<%=i %>">菜单项目<%= i %></a>
-				</li>
-				<% } %>
 				<li>
 					<a href="/#/dsfd/dsfd">whoami</a>
 				</li>

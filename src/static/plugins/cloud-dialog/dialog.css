@@ -1,0 +1,141 @@
+.cloud-bx-dialog-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0, 0.7);
+	z-index: 9999;
+	display: none;
+}
+.cloud-bx-dialog-mask.none {
+	background: transparent;
+}
+
+.cloud-bx-dialog-mask .cloud-bx-dialog {
+	-webkit-animation-duration: 0.3s;
+	-o-animation-duration: 0.3s;
+	-ms-animation-duration: 0.3s;
+	-moz-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	padding: 8px;
+	position: fixed;
+	margin-top: -100px;
+	top: 100px;
+	left: 50%;
+	background: #fff;
+	min-width: 400px;
+	z-index: 9999;
+	box-shadow: 0 1px 10px  0 rgba(0,0,0,.3);
+	border-radius: 2px;
+}
+
+.cloud-bx-dialog .dialog-header {
+	position: relative;
+	line-height: 20px;
+}
+.cloud-bx-dialog .dialog-header .title {
+	margin: 0;
+	line-height: 20px;
+	font-size: 18px;
+	color: #273e52;
+	position: relative;
+    top: 6px;
+    font-weight: bold;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 8px;
+	display: block; 
+    margin: 0 12px;
+}
+.cloud-bx-dialog .dialog-header .title.none {
+	display: none;
+}
+.cloud-bx-dialog .dialog-header .close:hover {
+	-webkit-transform: rotate(180deg) scale3d(1.1, 1.1, 1);
+	-moz-transform: rotate(180deg) scale3d(1.1, 1.1, 1);
+	-o-transform: rotate(180deg) scale3d(1.1, 1.1, 1);
+	-ms-transform: rotate(180deg) scale3d(1.1, 1.1, 1);
+	transform: rotate(180deg) scale3d(1.1, 1.1, 1);
+}
+
+.cloud-bx-dialog .dialog-header .close {
+	color: #FF575B;
+    opacity: 1;
+	position: absolute;
+	right: -4px;
+	top: -6px;
+	outline: none;
+	height: 36px;
+	width: 36px;
+}
+
+.cloud-bx-dialog .dialog-body {
+	padding: 20px;
+	font-size: 16px;
+	margin-top: 32px;
+	text-align: center;
+	color: #273e52;
+}
+
+
+.cloud-bx-dialog .dialog-footer {
+	text-align: center;
+	font-size: 0;
+	padding: 24px 32px;
+}
+.cloud-bx-dialog .dialog-footer button {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #FF575B;
+    border-radius: 4px;
+    color: #FF575B;
+    background-color: #fff;
+    min-width: 100px;
+    height: 45px;
+    outline: 0;
+	margin-right: 10px;
+
+    transition: .1s ease-in all;
+    -webkit-transition: .1s ease-in all;
+    -o-transition: .1s ease-in all;
+    -moz-transition: .1s ease-in all;
+    -ms-transition: .1s ease-in all;
+}
+.cloud-bx-dialog .dialog-footer button:last-child, 
+.cloud-bx-dialog .dialog-footer button.last {
+	margin-right: 0;
+}
+.cloud-bx-dialog .dialog-footer button.positive {
+	background: #FF575B;
+	color: #fff;
+	border-bottom-color: #d33e42;
+}
+
+.cloud-bx-dialog .dialog-footer button:hover {
+	-webkit-transform: scale3d(1.05, 1.05, 1);
+	-moz-transform: scale3d(1.05, 1.05, 1);
+	-o-transform: scale3d(1.05, 1.05, 1);
+	-ms-transform: scale3d(1.05, 1.05, 1);
+	transform: scale3d(1.05, 1.05, 1);
+}
+
+.cloud-bx-dialog .dialog-footer button[disabled] {
+	background: #ddd;
+	box-shadow: none;
+	border-color: #ddd;
+	color: #fff;
+}
+.cloud-bx-dialog .dialog-footer button[disabled]:hover {
+	-webkit-transform: none;
+	-moz-transform: none;
+	-o-transform: none;
+	-ms-transform: none;
+	transform: none;
+}

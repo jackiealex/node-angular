@@ -1,6 +1,6 @@
 define ['shared/services/routeResolver'], () ->
 
-    app = angular.module('reimApp', ['ngRoute', 'routeResolverServices']);
+    app = angular.module('reimApp', ['ngRoute', 'routeResolverServices', 'oc.lazyLoad']);
     app.config(($routeProvider, $locationProvider, routeResolverProvider, $controllerProvider, $compileProvider, $filterProvider, $provide)->
 
         $locationProvider.html5Mode(true);
@@ -17,6 +17,7 @@ define ['shared/services/routeResolver'], () ->
         route = routeResolverProvider['route'];
 
         $routeProvider
+        .when('/templates/:id', route.resolve('template/List'))
         .when('/', route.resolve('Home'))
         .when('/test/:id', {
             templateUrl: '/static/app/test/test.html'
@@ -33,15 +34,20 @@ define ['shared/services/routeResolver'], () ->
                     return def.promise;
 
         })
+        .when('/templates', route.resolve('template/list'))
         .when('/company/:id', route.resolve('Company'))
-        .when('/404', route.resolve('404')).
-        otherwise {
+        .when('/404', route.resolve('404'))
+        .otherwise({
             redirectTo: '/404'
-        }
+        })
+
     ).controller('MainController', ($scope, $route, $routeParams, $location) ->
         $scope.$route = $route
         $scope.$location = $location
         $scope.$routeParams = $routeParams
+
+
+        $scope.userProfile = window._userProfile_;
         return
     );
 
