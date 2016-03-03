@@ -53,7 +53,7 @@
 			return (new Function('return ' + string))();
 		},
 		api: function(url, opts) {
-			var baseUrl = 'http://api.cloudbaoxiao.com/dev/';
+			var baseUrl = window._ajaxApiDomain_;
 			var def = $.Deferred();
 			var regSlashStart = /^\//;
 			if(regSlashStart.test(url)) {
@@ -75,7 +75,8 @@
 				method: opts['method'],
 				dataType: opts['dataType'],
 				headers: {
-					'X-REIM-JWT': window.__CBX_UTOKEN__ || ''
+					'X-REIM-JWT': window._accessToken_,
+					'Authorization': 'Bearer ' + window._accessToken_
 				},
 				url: url,
 				data: opts['data'],

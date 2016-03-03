@@ -9,8 +9,9 @@ require.config({
         'angular-route': 'libs/angular-route/angular-route'
         'jquery': 'libs/jquery/jquery'
         'nicescroll': 'libs/jquery.nicescroll/jquery.nicescroll.min'
+        'underscore': 'libs/underscore/underscore-min'
         'shared': '../app/shared/'
-
+        'utils': 'boost/utils'
         # 'plugins': '../plugins'
         # fix me
         # why app for ../app is ok but
@@ -32,7 +33,7 @@ require.config({
         }
         'oc.lazyLoad': ['angular']
         # 'ng-sortable': ['sortable']
-        'app/index': ['jquery', 'angular', 'angular-route', 'oc.lazyLoad']
+        'app/index': ['jquery', 'angular', 'angular-route', 'oc.lazyLoad', 'utils']
     }
     map: {
         'ng-sortable': {

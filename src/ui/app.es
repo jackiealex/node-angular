@@ -15,6 +15,8 @@ import api from './libs/api'
 
 import CONFIG from './config/index'
 
+import bridge from './libs/bridge'
+
 // conditionally import for the developer
 (function (NODE_ENV) {
 	if(NODE_ENV === 'development') {
@@ -209,7 +211,6 @@ app.server.post('/passport', (req, res)=>{
 			password: password
 		}
 	}).done((rs)=>{
-		console.log(rs)
 		rs = {
 			node_code: 1,
 			dfsd: 'dfsd'
@@ -222,18 +223,24 @@ app.server.post('/passport', (req, res)=>{
 	});
 });
 
+bridge(app.server);
 
 app.server.get('*', (req, res)=>{
 	// check is the user is login successfully by using api get its profile, if the use go the page directly
+	const access_token = req.cookies['access_token'];
 	api.request({
 		pathname: '/users/0',
 		headers: {
 			'Authorization': 'Bearer ' + req.cookies['access_token']
 		}
 	}).done((rs)=>{
-		console.log(rs)
 		if(rs['node_code']>0) {
-			res.render('index.html', {profile_string: JSON.stringify(rs.data), env: process.env['NODE_ENV']});
+			res.render('index.html', {
+				profile_string: JSON.stringify(rs.data),
+				env: process.env['NODE_ENV'],
+				access_token: access_token,
+				ajax_api_domain: CONFIG['ajax_api_domain']
+			});
 		} else {
 			res.redirect('/login');
 		}

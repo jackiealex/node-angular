@@ -73,6 +73,7 @@ define([], function () {
                             defer.resolve();
                             // $rootScope.$apply();
                         }, function error(err) {
+                            debugger
                             console.error('error');
                         });
 

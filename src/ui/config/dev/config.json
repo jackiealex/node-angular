@@ -6,5 +6,6 @@
     "http_port": 8889,
     "static_CDN": "",
     "remote_api_domain": "api.cloudbaoxiao.com",
+    "ajax_api_domain": "http://alex.baidu.com:8889/",
     "branch": "dev"
 }
