@@ -10,12 +10,18 @@ require.config({
         'jquery': 'libs/jquery/jquery'
         'nicescroll': 'libs/jquery.nicescroll/jquery.nicescroll.min'
         'shared': '../app/shared/'
+
+        # 'plugins': '../plugins'
+        # fix me
         # why app for ../app is ok but
         'app': '../app'
+
         'auto-grow-input': 'libs/jquery.auto-grow-input.min',
         'sortable':'libs/Sortable/Sortable.min',
-        'ng-sortable':'libs/ng-sortable/ng-sortable',
+        'ng-sortable':'libs/Sortable/ng-sortable',
         'oc.lazyLoad':'libs/oclazyload/dist/ocLazyLoad.min',
+
+        'ng-dropdown':'/static/plugins/cloud-dropdown/index',
     }
     shim: {
         'angular': {
@@ -24,9 +30,15 @@ require.config({
         'angular-route': {
             deps: ['angular']
         }
-        'oc.lazyLoad': ['sortable']
-        'ng-sortable': ['sortable']
+        'oc.lazyLoad': ['angular']
+        # 'ng-sortable': ['sortable']
         'app/index': ['jquery', 'angular', 'angular-route', 'oc.lazyLoad']
+    }
+    map: {
+        'ng-sortable': {
+            # './Sortable': 'sortable' this not work
+            'Sortable': 'sortable'
+        }
     }
     deps: ['app/index']
 });
