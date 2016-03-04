@@ -358,9 +358,10 @@ define(['app/index', 'underscore', 'ng-sortable', 'ng-dropdown', 'auto-grow-inpu
         	function ensureShowingTemplate(data) {
         	    var def = $.Deferred();
         	    if(!data.id) {
-        	        Utils.api('/company/docreate_report_template', {
+        	        Utils.api('/no_bridge/company/docreate_report_template', {
         	            method: 'post',
         	            data: {
+                            date_file: 'template/create.json',
         	                template_name: data['name'],
         	                type: data['type']
         	            }
@@ -714,9 +715,10 @@ define(['app/index', 'underscore', 'ng-sortable', 'ng-dropdown', 'auto-grow-inpu
         	            return;
         	        }
         	        function createRequest() {
-        	            return Utils.api('/company/docreate_report_template', {
+        	            return Utils.api('/no_bridge/company/docreate_report_template', {
         	                method: 'post',
         	                data: {
+                                date_file: 'template/create.json',
         	                    template_name: templateData['name'],
         	                    type: templateData['type']
         	                }

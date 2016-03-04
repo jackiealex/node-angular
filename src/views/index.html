@@ -15,6 +15,22 @@
 	<!-- base css -->
 	<link rel="stylesheet" href="/static/css/main.css">
 	
+	<style>
+	.system-bubble {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		min-width: 10%;
+		white-space: nowrap;
+		padding: 16px;
+		background: #CC2600;
+		color: #fff;
+		display: none;
+		z-index: 999;
+		text-align: center;
+		border-radius: 2px;
+	}
+	</style>
 	<!-- add socket mechanism -->
 	<script src="/static/js/libs/socket.io-1.4.5.js"></script>
 	<script src="/static/js/boost/socket-client.js"></script>
@@ -26,8 +42,33 @@
 		window._ajaxApiDomain_ = "<%= ajax_api_domain %>";
 
 	</script>
+	<script>
+		function show_notify(msg, opts) {
+			opts || (opts = {delay: 2000});
+			var $bubble = $('<div class="system-bubble"></div>');
+			$bubble.text(msg)
+
+			var $lastItem = $('.system-bubble:last');
+
+			var top = 0;
+			
+			if($lastItem.length != 0) {
+				var top = $lastItem.position()['top'] + $lastItem.outerHeight() + 10;
+				$bubble.css({top: top});
+			}
+
+			$bubble.appendTo(document.body).show();
+
+			setTimeout(function () {
+				$bubble.fadeOut(1000, function () {
+					$bubble.remove();
+				});
+			}, opts.delay);
+		}
+	</script>
 </head>
 <body ng-controller="MainController">
+	<div class="system-bubble"></div>
 	<header id="header">
 		<div class="inner-wrap">
 			<div class="header-logo">
