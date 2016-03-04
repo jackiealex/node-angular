@@ -20,9 +20,11 @@ require.config({
         'auto-grow-input': 'libs/jquery.auto-grow-input.min',
         'sortable':'libs/Sortable/Sortable.min',
         'ng-sortable':'libs/Sortable/ng-sortable',
-        'oc.lazyLoad':'libs/oclazyload/dist/ocLazyLoad.min',
+        # 'oclazyLoad':'libs/oclazyload/dist/ocLazyLoad.min',
+        'ocLazyLoad':'libs/oclazyload/dist/ocLazyLoad',
 
-        'ng-dropdown':'/static/plugins/cloud-dropdown/index',
+        'ng-dropdown':'/static/app/shared/directives/cloud-dropdown/index',
+        'route-resolver': '/static/app/shared/services/routeResolver'
     }
     shim: {
         'angular': {
@@ -31,9 +33,10 @@ require.config({
         'angular-route': {
             deps: ['angular']
         }
-        'oc.lazyLoad': ['angular']
+        'ocLazyLoad': ['angular']
         # 'ng-sortable': ['sortable']
-        'app/index': ['jquery', 'angular', 'angular-route', 'oc.lazyLoad', 'utils']
+        'route-resolver': ['ocLazyLoad']
+        'app/index': ['jquery', 'angular', 'angular-route', 'utils', 'route-resolver']
     }
     map: {
         'ng-sortable': {

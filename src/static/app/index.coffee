@@ -1,7 +1,5 @@
-define ['shared/services/routeResolver', 'shared/modules/moduleC'], (routeResolver, moduleC) ->
-
-
-    app = angular.module('reimApp', ['ngRoute', 'routeResolverServices', 'oc.lazyLoad', 'moduleC']);
+define ['ng-sortable', 'ng-dropdown'], () ->
+    app = angular.module('reimApp', ['ngRoute', 'routeResolverServices', 'oc.lazyLoad', 'ng-sortable', 'ng-dropdown']);
     app.config(
         ( #参数过多，换行显示
             $routeProvider
@@ -10,12 +8,14 @@ define ['shared/services/routeResolver', 'shared/modules/moduleC'], (routeResolv
             $compileProvider
             $filterProvider
             $provide
+            $ocLazyLoadProvider
             routeResolverProvider
-            # CarProvider
-            UserProvider
-            AnimalProvider
         )->
-            # UserProvider.sayHello()
+            $ocLazyLoadProvider.config({
+                loadedModules: ['reimApp'],
+                jsLoader: requirejs
+                # files: [] #主模块需要的资源，这里主要子模块的声明文件
+            });
 
             $locationProvider.html5Mode(true);
 
@@ -37,19 +37,27 @@ define ['shared/services/routeResolver', 'shared/modules/moduleC'], (routeResolv
                 templateUrl: '/static/app/test/test.html'
                 controller: 'TestController'
                 resolve:
-                    done: ($q, $rootScope)->
-                        debugger
+                    done: ($q, $rootScope, $ocLazyLoad, $scope)->
                         def = $q.defer();
      
                         require ['app/test/TestController'], () ->
-                            setTimeout ()->
-                                def.resolve()
-                            , 100
                             
+                            def.resolve()
+                           
                         return def.promise;
 
             })
-            .when('/templates', route.resolve('template/list'))
+            .when('/templates', route.resolve('template/list', {
+                lazyload: {
+                    # name: ['ng-dropdown', 'ng-sortable'],
+                    # name: ['ng-dropdown'],
+                    files: [
+                        # 'js!/static/app/shared/directives/cloud-dropdown/index.js'
+                        # 'js!test/test'
+                        # 'js!/static/js/libs/Sortable/ng-sortable'
+                    ]
+                }
+            }))
             .when('/company/:id', route.resolve('Company'))
             .when('/404', route.resolve('404'))
             .otherwise({

@@ -1,4 +1,4 @@
-define(['app/index', 'underscore', 'ng-sortable', 'ng-dropdown', 'auto-grow-input'], function(app, _) {
+define(['app/index', 'underscore', 'auto-grow-input'], function(app, _) {
     
 	var _fieldCountLimit_ = 6;
 	var _radioOptionsCountLimit_ = 100;
@@ -557,7 +557,6 @@ define(['app/index', 'underscore', 'ng-sortable', 'ng-dropdown', 'auto-grow-inpu
         	    scroll: true,
         	    onUpdate: function (e) {}
         	};
-
         	$scope.makeDropdown = {
         	    onChange: function(oldValue, newValue, item, columnData) {
         	        $scope.$apply(function() {

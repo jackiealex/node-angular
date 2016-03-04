@@ -1,5 +1,6 @@
 // reset
-html, body {
+html, 
+body {
 	margin: 0;
 	padding: 0;
 }
@@ -25,4 +26,74 @@ img {
 
 div {
 	box-sizing: border-box;
+}
+
+input[type=color]:hover,
+input[type=date]:hover,
+input[type=datetime-local]:hover, 
+input[type=datetime]:hover, 
+input[type=email]:hover, 
+input[type=month]:hover, 
+input[type=number]:hover, 
+input[type=password]:hover, 
+input[type=search]:hover, 
+input[type=tel]:hover, 
+input[type=text]:hover, 
+input[type=time]:hover, 
+input[type=url]:hover, 
+input[type=week]:hover, 
+textarea:hover {
+    border-color: #b5b5b5;
+}
+
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week], textarea {
+    border-radius: 0!important;
+    color: #858585;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    padding: 5px 4px 6px;
+    font-size: 14px;
+    font-family: inherit;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+}
+
+button,
+input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-define([], function () {
+define(['ocLazyLoad'], function () {
 
     var viewsDirectory = '/static/app';
     var controllersDirectory = '/static/app';
@@ -53,30 +53,39 @@ define([], function () {
        
         this.route = {
             
-            resolve: function (modName, secure) {
-
+            resolve: function (modName, opts) {
+                opts || (opts={});
                 var routeDef = {};
 
                 var resource = getTemplateAndControllerPath(modName);
                 routeDef.controller = resource['controllerName'];
                 routeDef.templateUrl = resource['templateUrl'];
 
-                routeDef.secure = (secure) ? secure : false;
-
                 routeDef.resolve = {
-                    done: ['$q', '$rootScope', function ($q, $rootScope) {
+                    done: ['$q', '$rootScope', '$ocLazyLoad', function ($q, $rootScope, $ocLazyLoad) {
                         var dependencies = [resource['controllerUrl']];
 
                         var defer = $q.defer();
 
                         require(dependencies, function () {
-                            defer.resolve();
-                            // $rootScope.$apply();
+                            
+                                defer.resolve();
+                             
+                            
                         }, function error(err) {
-                            debugger
+                            
                             console.error('error');
                         });
 
+                        if(opts['lazyload']) {
+                            $ocLazyLoad.load(opts['lazyload']).then(function () {
+                                defer.resolve();
+                                setTimeout(function () {
+                                    $rootScope.$apply();
+                                }, 100)
+                            })
+                        }
+                        
                         return defer.promise;
                     }]
                 };
@@ -85,7 +94,7 @@ define([], function () {
         };
     };
 
-    var servicesApp = angular.module('routeResolverServices', []);
+    var servicesApp = angular.module('routeResolverServices', ['oc.lazyLoad']);
 
     //Must be a provider since it will be injected into module.config()    
     servicesApp.provider('routeResolver', RouteResolver);
