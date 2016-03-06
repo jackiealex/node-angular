@@ -3,7 +3,6 @@
  * @licence MIT
  */
 define(['angular'], function(angular) {
-    debugger
     angular.module('ng-dropdown', []).constant('ngDropdownVersion', '1.0.0') // const var 
     .constant('ngDropdownDefaultOptions', {
         onChange: function(oldValue, newValue, item) {},
@@ -12,7 +11,6 @@ define(['angular'], function(angular) {
     .directive('ngDropdown', ['$parse', 'ngDropdownDefaultOptions',
         function($parse, ngDropdownDefaultOptions) {
             // Export
-            debugger
             var getItemByKey = function(key, ls) {
                 for (var i = 0; i < ls.length; i++) {
                     var item = ls[i];

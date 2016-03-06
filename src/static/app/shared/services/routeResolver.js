@@ -1,6 +1,6 @@
 'use strict';
 
-define(['ocLazyLoad'], function () {
+define([], function () {
 
     var viewsDirectory = '/static/app';
     var controllersDirectory = '/static/app';
@@ -70,21 +70,10 @@ define(['ocLazyLoad'], function () {
                         require(dependencies, function () {
                             
                                 defer.resolve();
-                             
                             
                         }, function error(err) {
-                            
                             console.error('error');
                         });
-
-                        if(opts['lazyload']) {
-                            $ocLazyLoad.load(opts['lazyload']).then(function () {
-                                defer.resolve();
-                                setTimeout(function () {
-                                    $rootScope.$apply();
-                                }, 100)
-                            })
-                        }
                         
                         return defer.promise;
                     }]
@@ -94,7 +83,7 @@ define(['ocLazyLoad'], function () {
         };
     };
 
-    var servicesApp = angular.module('routeResolverServices', ['oc.lazyLoad']);
+    var servicesApp = angular.module('routeResolverServices', []);
 
     //Must be a provider since it will be injected into module.config()    
     servicesApp.provider('routeResolver', RouteResolver);

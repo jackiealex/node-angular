@@ -1,83 +1,43 @@
-define ['ng-sortable', 'ng-dropdown'], () ->
-    app = angular.module('reimApp', ['ngRoute', 'routeResolverServices', 'oc.lazyLoad', 'ng-sortable', 'ng-dropdown']);
+define ['angular'], (ng) ->
+    app = ng.module('reimApp', ['ui.router']);
     app.config(
         ( #参数过多，换行显示
-            $routeProvider
+            $urlRouterProvider
             $locationProvider
-            $controllerProvider
-            $compileProvider
-            $filterProvider
-            $provide
-            $ocLazyLoadProvider
-            routeResolverProvider
+            $stateProvider
         )->
-            $ocLazyLoadProvider.config({
-                loadedModules: ['reimApp'],
-                jsLoader: requirejs
-                # files: [] #主模块需要的资源，这里主要子模块的声明文件
+            $urlRouterProvider.otherwise("/404", {
+                templateUrl: "/static/app/404/index.html"    
+            });
+            $locationProvider.html5Mode(true)
+            # 挂在系统方法
+            $stateProvider
+            .state('state1', {
+                url: "/state1222",
+                templateUrl: "/static/app/test/test.html"
+            })
+            .state('state2', {
+                url: "/list/223",
+                templateUrl: "/static/app/test/test.html"
+                controller: ($scope)->
+                    $scope.things = ["A", "Set", "Of", "Things"];
+            })
+            .state('state2.xxx', {
+                url: "/22333/ffufufu",
+                templateUrl: "/static/app/test/test.html"
+                controller: ($scope)->
+                    $scope.things = ["A", "Set", "Of", "Things"];
             });
 
-            $locationProvider.html5Mode(true);
+    ).controller('MainController', ($scope)->
+        $scope.userProfile = {nickname: 'alex'};
+    )
 
-            # 挂在系统方法
-            app.register = {
-                controller: $controllerProvider.register,
-                filter: $filterProvider.register,
-                directive: $compileProvider.directive,
-                factory: $provide.factory,
-                service: $provide.service
-            };
-
-            route = routeResolverProvider['route'];
-
-            $routeProvider
-            .when('/templates/:id', route.resolve('template/List'))
-            .when('/', route.resolve('Home'))
-            .when('/test/:id', {
-                templateUrl: '/static/app/test/test.html'
-                controller: 'TestController'
-                resolve:
-                    done: ($q, $rootScope, $ocLazyLoad, $scope)->
-                        def = $q.defer();
-     
-                        require ['app/test/TestController'], () ->
-                            
-                            def.resolve()
-                           
-                        return def.promise;
-
-            })
-            .when('/templates', route.resolve('template/list', {
-                lazyload: {
-                    # name: ['ng-dropdown', 'ng-sortable'],
-                    # name: ['ng-dropdown'],
-                    files: [
-                        # 'js!/static/app/shared/directives/cloud-dropdown/index.js'
-                        # 'js!test/test'
-                        # 'js!/static/js/libs/Sortable/ng-sortable'
-                    ]
-                }
-            }))
-            .when('/company/:id', route.resolve('Company'))
-            .when('/404', route.resolve('404'))
-            .otherwise({
-                redirectTo: '/404'
-            })
-
-    ).controller('MainController', ($scope, $route, $routeParams, $location) ->
-        $scope.$route = $route
-        $scope.$location = $location
-        $scope.$routeParams = $routeParams
-
-        $scope.userProfile = window._userProfile_;
-        return
-    );
-
-    angular.bootstrap(document, ['reimApp']);
+    ng.bootstrap(document, ['reimApp']);
 
     _bindEvents_ = ()=>
         $(window).on 'resize', ()=>
-            sideBarHeight = $(window).height() - $('#header').height();
+            sideBarHeight = $(window).height();
             $('#sideBar').height(sideBarHeight);
             $('#main').css({'min-height': sideBarHeight});
         $(window).trigger('resize');
