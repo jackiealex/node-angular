@@ -26,7 +26,6 @@ require.config({
         # angular
         "ngload": 'libs/angularAMD/ngload',
         "angularAMD": 'libs/angularAMD/angularAMD',
-        "ngload": 'libs/ngload/ngload',
         'angular-ui-router': 'libs/angular-ui-router/release/angular-ui-router'
         'ui-router-extras-future': 'libs/ui-router-extras/release/modular/ct-ui-router-extras.future'
         'ui-router-extras-core': 'libs/ui-router-extras/release/modular/ct-ui-router-extras.core'

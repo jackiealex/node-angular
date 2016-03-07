@@ -1,11 +1,34 @@
-define ['angularAMD', 'angular-ui-router', 'ui-router-extras-future', 'ng-sortable'], (angularAMD)->
-    app = angular.module('reimApp', ['ui.router', 'ng-sortable']);
+define ['angularAMD', 'angular-ui-router', 'ui-router-extras-future'], (angularAMD)->
+    app = angular.module('reimApp', ['ui.router', 'ct.ui.router.extras.future']);
     app.config(
         ( #参数过多，换行显示
             $urlRouterProvider
             $locationProvider
             $stateProvider
+            $futureStateProvider
         )->
+
+            loadAndRegisterFutureStates = ($http, $q)->
+                state = {
+                    "urlPrefix": "/xx",
+                    "stateName": "hello",
+                    "type": "ngload",
+                    "src": "app/shared/modules/moduleA"
+                }
+                $futureStateProvider.futureState state
+                return $q.when(state);
+            ngloadStateFactory = ($q, futureState)->
+                def = $q.defer();
+                debugger
+                require ["ngload!" + futureState.src, 'ngload', 'angularAMD'], (result, ngload, angularAMD)->
+                    debugger
+                    angularAMD.processQueue();
+                    def.resolve(undefined);
+                return def.promise;
+
+            $futureStateProvider.stateFactory('ngload', ngloadStateFactory);
+            $futureStateProvider.addResolve(loadAndRegisterFutureStates);
+
             $urlRouterProvider.otherwise("/404", {
                 templateUrl: "/static/app/404/index.html"    
             });
