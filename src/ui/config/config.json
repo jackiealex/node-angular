@@ -5,5 +5,5 @@
     },
     "http_port": 8889,
     "static_CDN": "",
-    "remote_api_demain": "http://api.cloudbaoxiao.com/dev/",
+    "remote_api_demain": "http://api.cloudbaoxiao.com/dev/"
 }
