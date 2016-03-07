@@ -20,6 +20,7 @@
     "jquery": "1.9.1",
     "angular": "1.2",
     "underscore": "~1.8.3",
-    "requirejs": "~2.1.22"
+    "requirejs": "~2.1.22",
+    "ui-router-extras": "~0.1.0"
   }
 }

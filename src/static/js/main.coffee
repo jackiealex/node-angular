@@ -16,22 +16,32 @@ require.config({
         # why app for ../app is ok but
         'app': '../app'
 
-        'auto-grow-input': 'libs/jquery.auto-grow-input.min',
-        'sortable':'libs/Sortable/Sortable.min',
-        'ng-sortable':'libs/Sortable/ng-sortable',
+        'auto-grow-input': 'libs/jquery.auto-grow-input.min'
+        'sortable':'libs/Sortable/Sortable.min'
+        'ng-sortable':'libs/Sortable/ng-sortable'
         # 'oclazyLoad':'libs/oclazyload/dist/ocLazyLoad.min',
 
-        'ng-dropdown':'/static/app/shared/directives/cloud-dropdown/index',
-        'route-resolver': '/static/app/shared/services/routeResolver'
+        'ng-dropdown':'/static/app/shared/directives/cloud-dropdown/index'
+        
+        # angular
+        "ngload": 'libs/angularAMD/ngload',
+        "angularAMD": 'libs/angularAMD/angularAMD',
+        "ngload": 'libs/ngload/ngload',
         'angular-ui-router': 'libs/angular-ui-router/release/angular-ui-router'
+        'ui-router-extras-future': 'libs/ui-router-extras/release/modular/ct-ui-router-extras.future'
+        'ui-router-extras-core': 'libs/ui-router-extras/release/modular/ct-ui-router-extras.core'
     }
     shim: {
         'angular': {
             exports: 'angular'
         }
-        'angular-ui-router': deps: ['angular']
-        # 'ng-sortable': ['sortable']
-        'app/index': ['jquery', 'angular-ui-router', 'utils']
+        'angularAMD': 'angular'
+        'ngload': 'angularAMD'
+        'angular-ui-router': 'angular'
+        "ui-router-extras-core": "angular"
+        "ui-router-extras-future": ["angular", "ui-router-extras-core"]
+
+        'app/index': ['jquery', 'angular', 'utils']
     }
     map: {
         'ng-sortable': {

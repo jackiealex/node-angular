@@ -1,5 +1,5 @@
-define ['angular'], (ng) ->
-    app = ng.module('reimApp', ['ui.router']);
+define ['angularAMD', 'angular-ui-router', 'ui-router-extras-future', 'ng-sortable'], (angularAMD)->
+    app = angular.module('reimApp', ['ui.router', 'ng-sortable']);
     app.config(
         ( #参数过多，换行显示
             $urlRouterProvider
@@ -15,6 +15,10 @@ define ['angular'], (ng) ->
             .state('state1', {
                 url: "/state1222",
                 templateUrl: "/static/app/test/test.html"
+            })
+            .state('hello', {
+                url: "/world",
+                templateUrl: "/static/app/test/sortable.html"
             })
             .state('state2', {
                 url: "/list/223",
@@ -33,7 +37,7 @@ define ['angular'], (ng) ->
         $scope.userProfile = {nickname: 'alex'};
     )
 
-    ng.bootstrap(document, ['reimApp']);
+    angularAMD.bootstrap(app);
 
     _bindEvents_ = ()=>
         $(window).on 'resize', ()=>
